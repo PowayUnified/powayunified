@@ -44,6 +44,37 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🚀 Deployment to GitHub Pages
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+### Setup Instructions
+
+1. **Push your code** to the `main` branch of your GitHub repository
+2. **Enable GitHub Pages**:
+   - Go to your repository Settings → Pages
+   - Under "Build and deployment", set Source to **GitHub Actions**
+3. The deployment workflow will automatically run and publish your site
+
+### Deployment Configuration
+
+- **Site URL**: `https://powayunified.github.io/powayunified`
+- **Workflow**: `.github/workflows/deploy.yml`
+- **Trigger**: Automatically runs on every push to `main` branch, or manually from Actions tab
+- **Node Version**: 20
+- **Package Manager**: npm
+
+### How It Works
+
+The GitHub Actions workflow:
+1. Checks out your repository code
+2. Installs dependencies using npm
+3. Builds your Astro site for production
+4. Uploads the built site as a GitHub Pages artifact
+5. Deploys the artifact to GitHub Pages
+
+Your site will be available at the configured URL after the first successful deployment (usually takes 1-2 minutes).
+
 ## 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
