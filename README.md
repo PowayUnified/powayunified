@@ -47,3 +47,23 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+
+## 🪩 PUSD Brand Guidelines
+
+This document outlines the official PUSD color palette with placeholders for HEX, RGB, and CMYK values.
+
+##### Primary Colors
+
+| Color Name       | HEX       | RGB            | CMYK             |
+|-------------------|-----------|---------------|-------------------|
+| PUSD GOLD         | #f0ad4e   | rgb(243, 173, 78)    | cmyk(0%, 29%, 68%, 5%)|
+| PUSD LIGHT BLUE   | #54c8eb   | rgb(84, 200, 235)    | cmyk(64%, 15%, 0%, 8%)|
+| PUSD NAVY         | #003366   | rgb(0, 51, 102)    | cmyk(100%, 50%, 0%, 60%)|
+
+##### Secondary Colors
+
+| Color Name       | HEX       | RGB            | CMYK             |
+|-------------------|-----------|---------------|-------------------|
+| PUSD Alt 1        | #dce0ef   | rgb(220, 224, 239)    | cmyk(8%, 6%, 0%, 6%)|
+| PUSD Alt 2        | #a5afd6   | rgb(165, 175, 214)    | cmyk(23%, 18%, 0%, 16%)|
+| PUSD Alt 3        | #3a57a8   | rgb(58, 87, 168)    | cmyk(65%, 48%, 0%, 34%)|

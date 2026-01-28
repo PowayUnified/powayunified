@@ -1,0 +1,74 @@
+/* PUSD Brand Color Theme for Starlight */
+
+:root {
+	/* PUSD Primary Colors */
+	--pusd-gold: #f0ad4e;
+	--pusd-light-blue: #54c8eb;
+	--pusd-navy: #003366;
+	
+	/* PUSD Secondary Colors */
+	--pusd-alt-1: #dce0ef;
+	--pusd-alt-2: #a5afd6;
+	--pusd-alt-3: #3a57a8;
+
+	/* Starlight Dark Mode Colors - Using PUSD Navy & Light Blue */
+	--sl-color-accent-low: #002347;
+	--sl-color-accent: #54c8eb;
+	--sl-color-accent-high: #b3ddee;
+	
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #dce0ef;
+	--sl-color-gray-2: #a5afd6;
+	--sl-color-gray-3: #7485b8;
+	--sl-color-gray-4: #3a57a8;
+	--sl-color-gray-5: #003366;
+	--sl-color-gray-6: #002347;
+	--sl-color-black: #001829;
+}
+
+/* Light Mode Colors - Using PUSD Gold & Navy */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #fef5e7;
+	--sl-color-accent: #003366;
+	--sl-color-accent-high: #001829;
+	
+	--sl-color-white: #001829;
+	--sl-color-gray-1: #002347;
+	--sl-color-gray-2: #003366;
+	--sl-color-gray-3: #3a57a8;
+	--sl-color-gray-4: #7485b8;
+	--sl-color-gray-5: #a5afd6;
+	--sl-color-gray-6: #dce0ef;
+	--sl-color-gray-7: #f5f7fa;
+	--sl-color-black: #ffffff;
+}
+
+/* Additional PUSD Brand Styling */
+a {
+	text-decoration-thickness: 2px;
+}
+
+/* Highlight current navigation items with PUSD Gold */
+[aria-current='page'],
+[aria-current='page']:hover,
+[aria-current='page']:focus {
+	font-weight: 600;
+}
+
+/* Style inline code blocks with PUSD colors */
+:root {
+	--sl-color-code-bg: rgba(84, 200, 235, 0.1);
+}
+
+:root[data-theme='light'] {
+	--sl-color-code-bg: rgba(0, 51, 102, 0.05);
+}
+
+/* Custom styling for buttons and interactive elements */
+button, .button {
+	transition: all 0.2s ease;
+}
+
+button:hover, .button:hover {
+	transform: translateY(-1px);
+}
