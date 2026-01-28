@@ -9,6 +9,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Communications EO Resources',
+			favicon: './src/assets/favicon.ico',
 			customCss: ['./src/styles/custom.css'],
 			head: [
 					// Add a custom meta tag to define the author of all pages
