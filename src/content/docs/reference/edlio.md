@@ -1,5 +1,5 @@
 ---
-title: Example Reference
+title: Edlio
 description: A reference page in my new Starlight docs site.
 ---
 
@@ -8,4 +8,4 @@ Less concerned with telling a story or addressing a specific use case, they shou
 
 ## Further reading
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+- Read <a href="https://help.edlio.com/apps/pages/categories_sections" target="_blank" rel="noopener noreferrer">about Categories & Sections</a> in Edlio.
