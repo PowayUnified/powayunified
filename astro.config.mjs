@@ -27,7 +27,7 @@ export default defineConfig({
 					label: 'Start Here',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Getting Started', slug: 'start-here/example' },
+						{ label: 'Getting Started', slug: 'start-here/getting-started' },
 					],
 				},
 				{
@@ -41,6 +41,10 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
+				},
+				{
+					label: 'Support',
+					autogenerate: { directory: 'support' },
 				},
 			],
 		}),
