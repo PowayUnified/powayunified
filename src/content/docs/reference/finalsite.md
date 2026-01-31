@@ -1,6 +1,6 @@
 ---
-title: Edlio
-description: A reference page on the most common items we maintain on the Edlio platform.
+title: Finalsite
+description: A reference page on the most common items we encounter throughout the Finalsite platform.
 ---
 
 Reference pages are ideal for outlining how things work in terse and clear terms.
@@ -8,4 +8,3 @@ Less concerned with telling a story or addressing a specific use case, they shou
 
 ## Further reading
 
-- Read about <a href="https://help.edlio.com/apps/pages/categories_sections" target="_blank" rel="noopener noreferrer">Categories & Sections</a>.
