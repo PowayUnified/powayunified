@@ -4,8 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://powayunified.github.io',
-	base: import.meta.env.PROD ? '/powayunified' : '/',
+    site: 'https://communications.powayusd.com',
+    base: '/',
 	integrations: [
 		starlight({
 			title: 'Communications EO Resources',
