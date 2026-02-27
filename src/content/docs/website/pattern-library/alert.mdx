@@ -1,0 +1,224 @@
+---
+title: Alert
+description: Display important messages, notifications, and status updates with multiple style variants.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+Display important messages, notifications, warnings, and status updates to users in a visually distinct and accessible manner.
+
+## Features
+
+<CardGrid>
+  <Card title="Accessible" icon="approve-check-circle">
+    Uses proper ARIA roles (`role="alert"`) and `aria-live` attributes for full screen reader compatibility.
+  </Card>
+  <Card title="Responsive" icon="laptop">
+    Adapts gracefully to all screen sizes with flexible layout and inline styles.
+  </Card>
+  <Card title="Brand Compliant" icon="star">
+    Uses official PUSD colors: Navy (`#003366`), Light Blue (`#54c8eb`), and Gold (`#f0ad4e`).
+  </Card>
+  <Card title="Copy-Paste Ready" icon="document">
+    Inline CSS makes each snippet immediately usable in the Edlio CMS WYSIWYG editor with no external stylesheets required.
+  </Card>
+</CardGrid>
+
+## Variants
+
+Six alert variants are available:
+
+| Variant | Color | Use Case |
+|---|---|---|
+| `info` | PUSD Light Blue `#54c8eb` | General information, tips, and helpful notes |
+| `success` | Green `#4caf50` | Successful operations, confirmations, positive feedback |
+| `warning` | PUSD Gold `#f0ad4e` | Important notices, cautions, non-critical issues |
+| `error` | Red `#d32f2f` | Errors, failures, critical problems requiring action |
+| `navy` | PUSD Navy `#003366` | Official announcements, district-wide notices |
+| `compact` | PUSD Light Blue `#54c8eb` | Brief messages without icons |
+
+## Usage
+
+### Parameters
+
+| Parameter | Type | Description |
+|---|---|---|
+| `type` | String | Alert variant: `info`, `success`, `warning`, `error`, `navy`, `compact` |
+| `title` | String | Optional heading for the alert |
+| `message` | String / HTML | Main alert content (supports HTML) |
+| `buttonText` | String | Optional button label — when provided, a button is rendered |
+| `buttonUrl` | String | Button link URL (defaults to `#`) |
+| `buttonStyle` | String | Button variant: `primary`, `secondary`, `outline`, `gold` |
+
+## Copy-Paste Code
+
+Select any snippet below and paste it directly into the Edlio CMS WYSIWYG editor.
+
+<Tabs>
+  <TabItem label="Info">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e8f7fc; border-left: 4px solid #54c8eb; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #0277bd;">ℹ&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Information</strong><p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">This is an informational alert. Use it to communicate general information to users.</p></div></div></div></div>
+    ```html
+    <!-- INFO ALERT (PUSD LIGHT BLUE) -->
+    <div role="alert" aria-live="polite" style="background-color: #e8f7fc; border-left: 4px solid #54c8eb; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #0277bd;">ℹ&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Information</strong>
+            <p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">This is an informational alert. Use it to communicate general information to users.</p>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Success">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #2e7d32;">✓&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #2e7d32; margin-bottom: 4px; font-size: 16px;">Success</strong><p style="margin: 0; color: #2e7d32; line-height: 1.5; font-size: 14px;">This is a success alert. Use it to confirm successful actions or positive outcomes.</p></div></div></div></div>
+    ```html
+    <!-- SUCCESS ALERT (GREEN) -->
+    <div role="alert" aria-live="polite" style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #2e7d32;">✓&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #2e7d32; margin-bottom: 4px; font-size: 16px;">Success</strong>
+            <p style="margin: 0; color: #2e7d32; line-height: 1.5; font-size: 14px;">This is a success alert. Use it to confirm successful actions or positive outcomes.</p>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Warning">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #fef9f0; border-left: 4px solid #f0ad4e; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #8a6d3b;">⚠&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #8a6d3b; margin-bottom: 4px; font-size: 16px;">Warning</strong><p style="margin: 0; color: #8a6d3b; line-height: 1.5; font-size: 14px;">This is a warning alert. Use it to caution users about potential issues or important notices.</p></div></div></div></div>
+    ```html
+    <!-- WARNING ALERT (PUSD GOLD) -->
+    <div role="alert" aria-live="polite" style="background-color: #fef9f0; border-left: 4px solid #f0ad4e; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #8a6d3b;">⚠&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #8a6d3b; margin-bottom: 4px; font-size: 16px;">Warning</strong>
+            <p style="margin: 0; color: #8a6d3b; line-height: 1.5; font-size: 14px;">This is a warning alert. Use it to caution users about potential issues or important notices.</p>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Error">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="assertive" style="background-color: #fdecea; border-left: 4px solid #d32f2f; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #c62828;">✕&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #c62828; margin-bottom: 4px; font-size: 16px;">Error</strong><p style="margin: 0; color: #c62828; line-height: 1.5; font-size: 14px;">This is an error alert. Use it to communicate errors or critical issues requiring attention.</p></div></div></div></div>
+    ```html
+    <!-- ERROR ALERT (RED) -->
+    <div role="alert" aria-live="assertive" style="background-color: #fdecea; border-left: 4px solid #d32f2f; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #c62828;">✕&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #c62828; margin-bottom: 4px; font-size: 16px;">Error</strong>
+            <p style="margin: 0; color: #c62828; line-height: 1.5; font-size: 14px;">This is an error alert. Use it to communicate errors or critical issues requiring attention.</p>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Navy">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e6eaf0; border-left: 4px solid #003366; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #003366;">●&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Notice</strong><p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">This is a PUSD Navy alert. Use it for official district announcements or important notices.</p></div></div></div></div>
+    ```html
+    <!-- NAVY ALERT (PUSD NAVY) -->
+    <div role="alert" aria-live="polite" style="background-color: #e6eaf0; border-left: 4px solid #003366; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #003366;">●&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Notice</strong>
+            <p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">This is a PUSD Navy alert. Use it for official district announcements or important notices.</p>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Compact">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e8f7fc; border-left: 4px solid #54c8eb; padding: 12px 16px; margin: auto; border-radius: 4px;"><p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;"><strong>Quick Tip:</strong> This is a compact alert without an icon, suitable for brief messages.</p></div></div></div>
+    ```html
+    <!-- COMPACT ALERT (Minimal Style) -->
+    <div role="alert" aria-live="polite" style="background-color: #e8f7fc; border-left: 4px solid #54c8eb; padding: 12px 16px; margin: auto; border-radius: 4px;">
+        <p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;"><strong>Quick Tip:</strong> This is a compact alert without an icon, suitable for brief messages.</p>
+    </div>
+    ```
+  </TabItem>
+</Tabs>
+
+### Alerts with Buttons
+
+<Tabs>
+  <TabItem label="Primary Button">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e8f7fc; border-left: 4px solid #54c8eb; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #0277bd;">ℹ&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Action Required</strong><p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">Please review and update your contact information to ensure you receive important district notifications.</p><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">Update Information</a></div></div></div></div>
+    ```html
+    <!-- INFO ALERT WITH PRIMARY BUTTON -->
+    <div role="alert" aria-live="polite" style="background-color: #e8f7fc; border-left: 4px solid #54c8eb; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #0277bd;">ℹ&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Action Required</strong>
+            <p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">Please review and update your contact information to ensure you receive important district notifications.</p>
+            <a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">Update Information</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Outline Button">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #fef9f0; border-left: 4px solid #f0ad4e; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #8a6d3b;">⚠&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #8a6d3b; margin-bottom: 4px; font-size: 16px;">Deadline Approaching</strong><p style="margin: 0; color: #8a6d3b; line-height: 1.5; font-size: 14px;">The enrollment deadline is coming up soon. Don't miss your chance to register for the upcoming school year.</p><a href="#" style="display: inline-block; background-color: transparent; color: #003366; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">Enroll Now</a></div></div></div></div>
+    ```html
+    <!-- WARNING ALERT WITH OUTLINE BUTTON -->
+    <div role="alert" aria-live="polite" style="background-color: #fef9f0; border-left: 4px solid #f0ad4e; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #8a6d3b;">⚠&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #8a6d3b; margin-bottom: 4px; font-size: 16px;">Deadline Approaching</strong>
+            <p style="margin: 0; color: #8a6d3b; line-height: 1.5; font-size: 14px;">The enrollment deadline is coming up soon. Don't miss your chance to register for the upcoming school year.</p>
+            <a href="#" style="display: inline-block; background-color: transparent; color: #003366; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">Enroll Now</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Gold Button">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e6eaf0; border-left: 4px solid #003366; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #003366;">●&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Important Announcement</strong><p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">New district policies have been published. All staff and families should review the updated guidelines.</p><a href="#" style="display: inline-block; background-color: #f0ad4e; color: #003366; border: 2px solid #f0ad4e; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">Read More</a></div></div></div></div>
+    ```html
+    <!-- NAVY ALERT WITH GOLD BUTTON -->
+    <div role="alert" aria-live="polite" style="background-color: #e6eaf0; border-left: 4px solid #003366; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #003366;">●&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #003366; margin-bottom: 4px; font-size: 16px;">Important Announcement</strong>
+            <p style="margin: 0; color: #003366; line-height: 1.5; font-size: 14px;">New district policies have been published. All staff and families should review the updated guidelines.</p>
+            <a href="#" style="display: inline-block; background-color: #f0ad4e; color: #003366; border: 2px solid #f0ad4e; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">Read More</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Secondary Button">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div role="alert" aria-live="polite" style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #2e7d32;">✓&#xFE0E;</span><div style="flex: 1; min-width: 0;"><strong style="display: block; color: #2e7d32; margin-bottom: 4px; font-size: 16px;">Registration Complete</strong><p style="margin: 0; color: #2e7d32; line-height: 1.5; font-size: 14px;">Your enrollment has been successfully submitted. Check your email for confirmation details.</p><a href="#" style="display: inline-block; background-color: #54c8eb; color: #003366; border: 2px solid #54c8eb; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">View Confirmation</a></div></div></div></div>
+    ```html
+    <!-- SUCCESS ALERT WITH SECONDARY BUTTON -->
+    <div role="alert" aria-live="polite" style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px 20px; margin: auto; border-radius: 4px; display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 24px; line-height: 1; margin-top: 2px; font-weight: bold; color: #2e7d32;">✓&#xFE0E;</span>
+        <div style="flex: 1; min-width: 0;">
+            <strong style="display: block; color: #2e7d32; margin-bottom: 4px; font-size: 16px;">Registration Complete</strong>
+            <p style="margin: 0; color: #2e7d32; line-height: 1.5; font-size: 14px;">Your enrollment has been successfully submitted. Check your email for confirmation details.</p>
+            <a href="#" style="display: inline-block; background-color: #54c8eb; color: #003366; border: 2px solid #54c8eb; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 12px; transition: all 0.3s ease; cursor: pointer;">View Confirmation</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+</Tabs>
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- `role="alert"` — Announces the alert to screen readers immediately upon render
+- `aria-live="polite"` — Non-urgent announcements for `info`, `success`, `warning`, and `navy` variants
+- `aria-live="assertive"` — Urgent announcements for `error` variants
+- `aria-hidden="true"` — Hides decorative Unicode icons from screen readers
+- Semantic structure using `<strong>` for headings within the alert body
+- Color contrast ratios meet WCAG 2.1 AA requirements across all variants
+</Aside>
+
+## Customization
+
+<Steps>
+1. **Change the title** — Update the text inside the `<strong>` tag.
+
+2. **Change the message** — Update the text inside the `<p>` tag.
+
+3. **Add links** — Use standard `<a href="">` tags within the message paragraph.
+
+4. **Keep colors consistent** — Maintain the `border-left` color value to match the alert variant.
+
+5. **Remove the icon** — Delete the entire `<span>` element containing the Unicode character for a compact style.
+
+6. **Add a button** — Paste a button `<a>` tag after the `<p>` element. Use `margin-top: 12px` for spacing. Available button styles:
+   - **Primary (Navy):** `background-color: #003366`
+   - **Secondary (Light Blue):** `background-color: #54c8eb`
+   - **Outline (Transparent):** `background-color: transparent`
+   - **Gold:** `background-color: #f0ad4e`
+</Steps>

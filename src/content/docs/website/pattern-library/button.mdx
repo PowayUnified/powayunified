@@ -1,0 +1,192 @@
+---
+title: Button
+description: Clickable elements for actions, links, and form submissions.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**Copy-and-paste button components for the Edlio WYSIWYG editor.** These buttons follow PUSD brand guidelines and are fully accessible, responsive, and require no external dependencies.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Brand Compliant" icon="star">
+    Uses official PUSD colors — Navy (`#003366`), Light Blue (`#54c8eb`), Gold (`#f0ad4e`), and Alt Blue (`#3a57a8`).
+  </Card>
+  <Card title="No Dependencies" icon="approve-check-circle">
+    Fully inline CSS — no external stylesheets needed. Paste directly into Edlio CMS.
+  </Card>
+  <Card title="Multiple Styles" icon="list-format">
+    Primary, Secondary, Outline, Gold, Alt Blue, sizes, full-width, icon, group, centered, and disabled variants.
+  </Card>
+  <Card title="Accessible" icon="information">
+    Semantic `<a>` and `<span>` tags, WCAG AA contrast ratios, keyboard accessible, and no JavaScript required.
+  </Card>
+</CardGrid>
+
+## Button Types
+
+<Tabs>
+  <TabItem label="Primary">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; border: 2px solid #003366; cursor: pointer;">Primary Button</a></div></div>
+    ```html
+    <!-- PRIMARY BUTTON (PUSD NAVY) -->
+    <a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">Primary Button</a>
+    ```
+  </TabItem>
+  <TabItem label="Secondary">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><a href="#" style="display: inline-block; background-color: #54c8eb; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; border: 2px solid #54c8eb; cursor: pointer;">Secondary Button</a></div></div>
+    ```html
+    <!-- SECONDARY BUTTON (PUSD LIGHT BLUE) -->
+    <a href="#" style="display: inline-block; background-color: #54c8eb; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #54c8eb; cursor: pointer;">Secondary Button</a>
+    ```
+  </TabItem>
+  <TabItem label="Outline">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><a href="#" style="display: inline-block; background-color: transparent; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; border: 2px solid #003366; cursor: pointer;">Outline Button</a></div></div>
+    ```html
+    <!-- OUTLINE BUTTON (NAVY BORDER) -->
+    <a href="#" style="display: inline-block; background-color: transparent; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: all 0.3s ease; border: 2px solid #003366; cursor: pointer;">Outline Button</a>
+    ```
+  </TabItem>
+  <TabItem label="Gold">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><a href="#" style="display: inline-block; background-color: #f0ad4e; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; border: 2px solid #f0ad4e; cursor: pointer;">Gold Button</a></div></div>
+    ```html
+    <!-- GOLD BUTTON (PUSD GOLD) -->
+    <a href="#" style="display: inline-block; background-color: #f0ad4e; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #f0ad4e; cursor: pointer;">Gold Button</a>
+    ```
+  </TabItem>
+  <TabItem label="Alt Blue">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><a href="#" style="display: inline-block; background-color: #3a57a8; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; border: 2px solid #3a57a8; cursor: pointer;">Alt Blue Button</a></div></div>
+    ```html
+    <!-- ALT BLUE BUTTON (PUSD ALT 3) -->
+    <a href="#" style="display: inline-block; background-color: #3a57a8; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #3a57a8; cursor: pointer;">Alt Blue Button</a>
+    ```
+  </TabItem>
+</Tabs>
+
+## Button Sizes
+
+```html
+<!-- SMALL BUTTON -->
+<a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">Small Button</a>
+
+<!-- MEDIUM BUTTON (DEFAULT) -->
+<a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">Medium Button</a>
+
+<!-- LARGE BUTTON -->
+<a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 16px 32px; text-decoration: none; border-radius: 4px; font-size: 18px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">Large Button</a>
+```
+
+| Size | `padding` | `font-size` |
+|---|---|---|
+| Small | `8px 16px` | `14px` |
+| Medium (Default) | `12px 24px` | `16px` |
+| Large | `16px 32px` | `18px` |
+
+## Full Width Button
+
+```html
+<!-- FULL WIDTH BUTTON -->
+<a href="#" style="display: block; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer; width: 100%; box-sizing: border-box;">Full Width Button</a>
+```
+
+<Aside type="note">
+Change `display: inline-block` to `display: block` and add `width: 100%; box-sizing: border-box;` to make any button span the full width of its container.
+</Aside>
+
+## Button with Icon
+
+### External Link Button
+
+```html
+<!-- BUTTON WITH ICON (External Link) -->
+<a href="#" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">
+    <span>External Link</span>
+    <svg aria-hidden="true" focusable="false" style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a>
+```
+
+<Aside type="tip" title="External Links">
+Always include `target="_blank"` and `rel="noopener noreferrer"` when linking to external sites. Use `aria-hidden="true"` on the SVG icon to prevent screen readers from announcing the icon separately.
+</Aside>
+
+## Button Groups
+
+### Horizontal Button Group
+
+```html
+<!-- BUTTON GROUP (Horizontal) -->
+<div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+    <a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">Primary Action</a>
+    <a href="#" style="display: inline-block; background-color: transparent; color: #003366; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: all 0.3s ease; border: 2px solid #003366; cursor: pointer;">Secondary Action</a>
+</div>
+```
+
+## Centered Button
+
+```html
+<!-- CENTERED BUTTON -->
+<div style="text-align: center; margin: 20px 0;">
+    <a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease; border: 2px solid #003366; cursor: pointer;">Centered Button</a>
+</div>
+```
+
+## Disabled Button
+
+```html
+<!-- DISABLED BUTTON (For display only, non-interactive) -->
+<span style="display: inline-block; background-color: #d3d3d3; color: #8a8a8a; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; text-align: center; border: 2px solid #d3d3d3; cursor: not-allowed; opacity: 0.6;">Disabled Button</span>
+```
+
+<Aside type="note" title="Why use a &lt;span&gt; for disabled?">
+A `<span>` element is used instead of `<a>` to prevent any interaction — it is not focusable and cannot be activated by keyboard or mouse. This is the correct approach for non-interactive disabled states in inline HTML.
+</Aside>
+
+## When to Use Each Button Type
+
+| Button Type | Best For | Example Use Cases |
+|---|---|---|
+| **Primary (Navy)** | Main actions | Enroll Now, Apply Today, Submit Form |
+| **Secondary (Light Blue)** | Supporting actions | Learn More, View Details, Read FAQ |
+| **Outline** | Tertiary actions | Cancel, Go Back, Skip |
+| **Gold** | Important CTAs | Donate Now, Register Today, Get Started |
+| **Alt Blue** | Alternative primary | Download PDF, Contact Us, View Calendar |
+
+## PUSD Brand Colors
+
+| Color Name | HEX | Text Color | Usage |
+|---|---|---|---|
+| PUSD Navy | `#003366` | `#ffffff` | Primary buttons, text |
+| PUSD Light Blue | `#54c8eb` | `#003366` | Secondary buttons, accents |
+| PUSD Gold | `#f0ad4e` | `#003366` | Call-to-action buttons |
+| PUSD Alt Blue | `#3a57a8` | `#ffffff` | Alternative primary buttons |
+
+## Customization Guide
+
+<Steps>
+1. **Change the URL** — Replace `href="#"` with your actual page URL.
+
+2. **Change the text** — Update the content between the opening and closing `<a>` tags.
+
+3. **Open in a new tab** — Add `target="_blank" rel="noopener noreferrer"` to the `<a>` tag for external links.
+
+4. **Adjust the size** — Modify `padding` and `font-size` using the size reference table above.
+
+5. **Change the color** — Update `background-color`, `color`, and `border` values using the PUSD brand color HEX codes above.
+
+6. **Make it full width** — Change `display: inline-block` to `display: block` and add `width: 100%; box-sizing: border-box;`.
+</Steps>
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- Semantic `<a>` elements for navigation links; `<span>` for disabled (non-interactive) states
+- All color combinations meet **WCAG AA** contrast ratios
+- Keyboard accessible — activatable with the `Enter` key
+- External links include `target="_blank"` and `rel="noopener noreferrer"` for security
+- SVG icons marked with `aria-hidden="true"` to avoid screen reader confusion
+- `cursor: not-allowed` on disabled state provides a clear visual affordance
+- Focus states are automatically handled by browsers
+</Aside>

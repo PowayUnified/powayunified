@@ -1,0 +1,277 @@
+---
+title: Hero
+description: Impactful page introductions with branded backgrounds, text, buttons, and optional image overlays.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**The Hero Component** creates impactful page introductions that appear immediately after the Edlio CMS page title to welcome users, set context, and guide them toward key actions. Available in text-only and image background variants, each with optional button support.
+
+## Key Features
+
+<CardGrid>
+  <Card title="7 Text-Only Styles" icon="list-format">
+    Welcome, Department, Page Intro, Centered, Minimal, Info Callout, and Announcement variants — each with or without button support.
+  </Card>
+  <Card title="5 Image Background Styles" icon="puzzle">
+    Dark overlay, light overlay, and directional gradient overlays for high-impact visual storytelling with background images.
+  </Card>
+  <Card title="Flexible Button Support" icon="approve-check-circle">
+    Single or dual buttons using Navy, Light Blue, Gold, Outline, and Alt Navy styles — composable with any hero type.
+  </Card>
+  <Card title="No Dependencies" icon="information">
+    Pure HTML with inline CSS — paste directly into Edlio WYSIWYG with no external stylesheets required.
+  </Card>
+</CardGrid>
+
+## Hero Types Overview
+
+| Type | Background | Best Used For |
+|---|---|---|
+| **Welcome Hero** | Navy gradient (`#003366` → `#3a57a8`) | District home page, school landing pages |
+| **Department Hero** | White + Light Blue left border | Department overview, service pages |
+| **Page Intro** | Gold gradient (`#f0ad4e` → `#ffc870`) | Information pages, general school pages |
+| **Centered Text** | Solid Navy (`#003366`) | Community messages, welcome statements |
+| **Minimal** | Light gray (`#f8f9fa`) + border | Quick-access pages, resource hubs |
+| **Info Callout** | Light Blue (`#e8f7fc`) + icon | Process pages, enrollment, how-to guides |
+| **Announcement** | Alt Navy gray (`#e6eaf0`) + gold badge | Time-sensitive notices, important updates |
+| **Image: Dark Overlay** | Background image + navy rgba overlay | High-impact welcome, visual storytelling |
+| **Image: Light Overlay** | Background image + white rgba overlay | Bright, content-forward visual pages |
+| **Image: Directional Gradient** | Background image + directional gradient | Department pages, left-aligned layouts |
+
+## Copy-Paste Code
+
+### Text-Only Heroes
+
+<Aside type="note" title="No &lt;h1&gt; Tags">
+Edlio CMS automatically provides the page `<h1>` title. All hero text uses `<p>` tags to maintain correct heading hierarchy. Do not add `<h1>`, `<h2>`, or `<h3>` inside hero components.
+</Aside>
+
+<Tabs>
+  <TabItem label="Welcome">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: linear-gradient(135deg, #003366 0%, #3a57a8 100%); padding: 40px 30px; border-radius: 8px; margin-bottom: 0; text-align: center;"><p style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; line-height: 1.6; font-style: italic;">Where we empower world-class learners!</p><p style="margin: 0; color: #e8f7fc; font-size: 16px; line-height: 1.6;">We are a nationally renowned public school district that proudly educates 34,000 students throughout 40 award-winning schools.</p><a href="#" style="display: inline-block; background-color: #f0ad4e; color: #003366; border: 2px solid #f0ad4e; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; margin-top: 20px; cursor: pointer;">Learn More</a></div></div></div>
+    ```html
+    <!-- WELCOME HERO WITH BUTTON -->
+    <div style="background: linear-gradient(135deg, #003366 0%, #3a57a8 100%); padding: 40px 30px; border-radius: 8px; margin-bottom: 24px; text-align: center;">
+        <p style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; line-height: 1.6; font-style: italic;">Where we empower world-class learners!</p>
+        <p style="margin: 0; color: #e8f7fc; font-size: 16px; line-height: 1.6;">We are a nationally renowned public school district that proudly educates 34,000 students throughout 40 award-winning schools.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #f0ad4e; color: #003366; border: 2px solid #f0ad4e; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; margin-top: 20px; transition: all 0.3s ease; cursor: pointer;">Learn More</a>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Department">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: #ffffff; border-left: 6px solid #54c8eb; padding: 30px; border-radius: 8px; margin-bottom: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"><p style="margin: 0 0 16px 0; color: #003366; font-size: 18px; line-height: 1.6; font-weight: 600;">Supporting excellence in education through innovative programs and dedicated service.</p><p style="margin: 0; color: #333; font-size: 16px; line-height: 1.6;">Our department is committed to providing resources, guidance, and support to ensure every student succeeds.</p><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 16px; cursor: pointer;">Explore Services</a></div></div></div>
+    ```html
+    <!-- DEPARTMENT HERO WITH BUTTON -->
+    <div style="background: #ffffff; border-left: 6px solid #54c8eb; padding: 30px; border-radius: 8px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="margin: 0 0 16px 0; color: #003366; font-size: 18px; line-height: 1.6; font-weight: 600;">Supporting excellence in education through innovative programs and dedicated service.</p>
+        <p style="margin: 0; color: #333; font-size: 16px; line-height: 1.6;">Our department is committed to providing resources, guidance, and support to ensure every student succeeds.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 16px; transition: all 0.3s ease; cursor: pointer;">Explore Services</a>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Page Intro">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: linear-gradient(135deg, #f0ad4e 0%, #ffc870 100%); padding: 30px; border-radius: 8px; margin-bottom: 0; text-align: center;"><p style="margin: 0 0 20px 0; color: #003366; font-size: 17px; line-height: 1.6;">Find important information, resources, and updates for our school community.</p><div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;"><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">Get Started</a><a href="#" style="display: inline-block; background-color: transparent; color: #003366; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">Learn More</a></div></div></div></div>
+    ```html
+    <!-- PAGE INTRO HERO WITH TWO BUTTONS -->
+    <div style="background: linear-gradient(135deg, #f0ad4e 0%, #ffc870 100%); padding: 30px; border-radius: 8px; margin-bottom: 24px; text-align: center;">
+        <p style="margin: 0 0 20px 0; color: #003366; font-size: 17px; line-height: 1.6;">Find important information, resources, and updates for our school community.</p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">Get Started</a>
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: transparent; color: #003366; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">Learn More</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Centered Text">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: #003366; padding: 40px 30px; border-radius: 8px; margin-bottom: 0; text-align: center;"><p style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; line-height: 1.6; font-weight: 600;">Welcome to our community where every student matters and every voice is heard.</p><p style="margin: 0; color: #e8f7fc; font-size: 15px; line-height: 1.6;">Together we build a foundation for lifelong learning and success.</p><a href="#" style="display: inline-block; background-color: #54c8eb; color: #003366; border: 2px solid #54c8eb; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 20px; cursor: pointer;">Join Us</a></div></div></div>
+    ```html
+    <!-- CENTERED TEXT HERO WITH BUTTON -->
+    <div style="background: #003366; padding: 40px 30px; border-radius: 8px; margin-bottom: 24px; text-align: center;">
+        <p style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; line-height: 1.6; font-weight: 600;">Welcome to our community where every student matters and every voice is heard.</p>
+        <p style="margin: 0; color: #e8f7fc; font-size: 15px; line-height: 1.6;">Together we build a foundation for lifelong learning and success.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #54c8eb; color: #003366; border: 2px solid #54c8eb; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 20px; transition: all 0.3s ease; cursor: pointer;">Join Us</a>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Minimal">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: #f8f9fa; border: 2px solid #dce0ef; border-radius: 8px; padding: 30px; margin-bottom: 0; text-align: center;"><p style="margin: 0 0 16px 0; color: #003366; font-size: 17px; line-height: 1.6;">Quick access to the resources and information you need.</p><a href="#" style="display: inline-block; background-color: #3a57a8; color: #ffffff; border: 2px solid #3a57a8; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">View Resources</a></div></div></div>
+    ```html
+    <!-- MINIMAL HERO WITH BUTTON -->
+    <div style="background: #f8f9fa; border: 2px solid #dce0ef; border-radius: 8px; padding: 30px; margin-bottom: 24px; text-align: center;">
+        <p style="margin: 0 0 16px 0; color: #003366; font-size: 17px; line-height: 1.6;">Quick access to the resources and information you need.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #3a57a8; color: #ffffff; border: 2px solid #3a57a8; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">View Resources</a>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Info Callout">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: #e8f7fc; border-radius: 8px; padding: 30px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap;"><span aria-hidden="true" style="flex-shrink: 0; font-size: 32px; line-height: 1; font-weight: bold; color: #54c8eb;">ℹ</span><div style="flex: 1; min-width: 250px;"><p style="margin: 0 0 12px 0; color: #003366; font-size: 17px; line-height: 1.6; font-weight: 600;">Everything you need to know about enrollment and registration.</p><p style="margin: 0 0 16px 0; color: #003366; font-size: 15px; line-height: 1.6;">Follow the steps below to complete the process and get your student enrolled for the upcoming school year.</p><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">Start Enrollment</a></div></div></div></div>
+    ```html
+    <!-- INFO CALLOUT HERO WITH BUTTON -->
+    <div style="background: #e8f7fc; border-radius: 8px; padding: 30px; margin-bottom: 24px; display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
+        <span aria-hidden="true" style="flex-shrink: 0; font-size: 32px; line-height: 1; font-weight: bold; color: #54c8eb;">ℹ</span>
+        <div style="flex: 1; min-width: 250px;">
+            <p style="margin: 0 0 12px 0; color: #003366; font-size: 17px; line-height: 1.6; font-weight: 600;">Everything you need to know about enrollment and registration.</p>
+            <p style="margin: 0 0 16px 0; color: #003366; font-size: 15px; line-height: 1.6;">Follow the steps below to complete the process and get your student enrolled for the upcoming school year.</p>
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">Start Enrollment</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Announcement">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: #e6eaf0; border-radius: 8px; padding: 30px; margin-bottom: 0; position: relative; overflow: hidden;"><div style="position: absolute; top: 16px; right: 16px; background-color: #f0ad4e; color: #003366; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase;">Important</div><p style="margin: 0 0 12px 0; color: #003366; font-size: 17px; line-height: 1.6; font-weight: 600;">Important updates and announcements for the current school year.</p><p style="margin: 0 0 16px 0; color: #003366; font-size: 15px; line-height: 1.6;">Stay informed about key dates, policy changes, and district-wide initiatives.</p><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">View Announcements</a></div></div></div>
+    ```html
+    <!-- ANNOUNCEMENT HERO WITH BUTTON -->
+    <div style="background: #e6eaf0; border-radius: 8px; padding: 30px; margin-bottom: 24px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 16px; right: 16px; background-color: #f0ad4e; color: #003366; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase;">Important</div>
+        <p style="margin: 0 0 12px 0; color: #003366; font-size: 17px; line-height: 1.6; font-weight: 600;">Important updates and announcements for the current school year.</p>
+        <p style="margin: 0 0 16px 0; color: #003366; font-size: 15px; line-height: 1.6;">Stay informed about key dates, policy changes, and district-wide initiatives.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">View Announcements</a>
+    </div>
+    ```
+  </TabItem>
+</Tabs>
+
+### Image Background Heroes
+
+<Aside type="tip" title="Image Background Tips">
+Replace `YOUR-IMAGE-URL-HERE` with your own high-resolution image URL (1920×800px minimum recommended). Use compressed, web-optimized images for performance. Always verify text contrast against your chosen image before publishing.
+</Aside>
+
+<Tabs>
+  <TabItem label="Dark Overlay">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)); padding: 60px 30px; border-radius: 8px; margin-bottom: 0; text-align: center; min-height: 240px; display: flex; flex-direction: column; justify-content: center; align-items: center;" role="img" aria-label="Welcome to Poway Unified School District"><p style="margin: 0 0 16px 0; color: #ffffff; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Welcome to Poway Unified School District</p><p style="margin: 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Empowering students to achieve academic excellence and become lifelong learners in a supportive, innovative environment.</p></div></div></div>
+    ```html
+    <!-- IMAGE BACKGROUND HERO (DARK OVERLAY) -->
+    <div style="background-image: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), url('YOUR-IMAGE-URL-HERE'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 30px; border-radius: 8px; margin-bottom: 24px; text-align: center; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center;" role="img" aria-label="Welcome to Poway Unified School District">
+        <p style="margin: 0 0 16px 0; color: #ffffff; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Welcome to Poway Unified School District</p>
+        <p style="margin: 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Empowering students to achieve academic excellence and become lifelong learners in a supportive, innovative environment.</p>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Dark + Button">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)); padding: 60px 30px; border-radius: 8px; margin-bottom: 0; text-align: center; min-height: 240px; display: flex; flex-direction: column; justify-content: center; align-items: center;" role="img" aria-label="Welcome to Poway Unified School District"><p style="margin: 0 0 16px 0; color: #ffffff; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Welcome to Poway Unified School District</p><p style="margin: 0 0 24px 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Empowering students to achieve academic excellence and become lifelong learners in a supportive, innovative environment.</p><a href="#" style="display: inline-block; background-color: #f0ad4e; color: #003366; border: 2px solid #f0ad4e; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Explore Our Schools</a></div></div></div>
+    ```html
+    <!-- IMAGE BACKGROUND HERO WITH BUTTON (DARK OVERLAY) -->
+    <div style="background-image: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), url('YOUR-IMAGE-URL-HERE'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 30px; border-radius: 8px; margin-bottom: 24px; text-align: center; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center;" role="img" aria-label="Welcome to Poway Unified School District">
+        <p style="margin: 0 0 16px 0; color: #ffffff; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Welcome to Poway Unified School District</p>
+        <p style="margin: 0 0 24px 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Empowering students to achieve academic excellence and become lifelong learners in a supportive, innovative environment.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #f0ad4e; color: #003366; border: 2px solid #f0ad4e; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Explore Our Schools</a>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Light + Two Buttons">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: #f0f4f8; padding: 60px 30px; border-radius: 8px; margin-bottom: 0; text-align: center; min-height: 240px; display: flex; flex-direction: column; justify-content: center; align-items: center;" role="img" aria-label="Discover Excellence in Education"><p style="margin: 0 0 16px 0; color: #003366; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px;">Discover Excellence in Education</p><p style="margin: 0 0 24px 0; color: #003366; font-size: 16px; line-height: 1.6; max-width: 700px;">Join our community of learners dedicated to academic achievement, innovation, and preparing students for future success.</p><div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;"><a href="#" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer;">Get Started</a><a href="#" style="display: inline-block; background-color: transparent; color: #003366; border: 2px solid #003366; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer;">Learn More</a></div></div></div></div>
+    ```html
+    <!-- IMAGE BACKGROUND HERO WITH TWO BUTTONS (LIGHT OVERLAY) -->
+    <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('YOUR-IMAGE-URL-HERE'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 30px; border-radius: 8px; margin-bottom: 24px; text-align: center; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center;" role="img" aria-label="Discover Excellence in Education">
+        <p style="margin: 0 0 16px 0; color: #003366; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px;">Discover Excellence in Education</p>
+        <p style="margin: 0 0 24px 0; color: #003366; font-size: 16px; line-height: 1.6; max-width: 700px;">Join our community of learners dedicated to academic achievement, innovation, and preparing students for future success.</p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #ffffff; border: 2px solid #003366; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">Get Started</a>
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: transparent; color: #003366; border: 2px solid #003366; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">Learn More</a>
+        </div>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Bottom Gradient">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: linear-gradient(to top, rgba(0, 51, 102, 0.95), rgba(0, 51, 102, 0.4)); padding: 60px 30px; border-radius: 8px; margin-bottom: 0; text-align: center; min-height: 240px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;" role="img" aria-label="Building Tomorrow's Leaders Today"><p style="margin: 0 0 12px 0; color: #ffffff; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Building Tomorrow's Leaders Today</p><p style="margin: 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Our commitment to excellence ensures every student has the opportunity to thrive and succeed.</p></div></div></div>
+    ```html
+    <!-- IMAGE BACKGROUND HERO (GRADIENT OVERLAY BOTTOM TO TOP) -->
+    <div style="background-image: linear-gradient(to top, rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.3)), url('YOUR-IMAGE-URL-HERE'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 30px; border-radius: 8px; margin-bottom: 24px; text-align: center; min-height: 350px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;" role="img" aria-label="Building Tomorrow's Leaders Today">
+        <p style="margin: 0 0 12px 0; color: #ffffff; font-size: 20px; line-height: 1.6; font-weight: 600; max-width: 800px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Building Tomorrow's Leaders Today</p>
+        <p style="margin: 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Our commitment to excellence ensures every student has the opportunity to thrive and succeed.</p>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="Left Gradient + Button">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="background: linear-gradient(to right, rgba(0, 51, 102, 0.95), rgba(0, 51, 102, 0.6)); padding: 60px 40px; border-radius: 8px; margin-bottom: 0; min-height: 240px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;" role="img" aria-label="Department of Educational Excellence"><p style="margin: 0 0 16px 0; color: #ffffff; font-size: 22px; line-height: 1.4; font-weight: 600; max-width: 600px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Department of Educational Excellence</p><p style="margin: 0 0 24px 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 550px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Providing resources, support, and innovative programs to ensure every student reaches their full potential.</p><a href="#" style="display: inline-block; background-color: #54c8eb; color: #003366; border: 2px solid #54c8eb; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Explore Our Services</a></div></div></div>
+    ```html
+    <!-- IMAGE BACKGROUND HERO WITH BUTTON (LEFT-ALIGNED, GRADIENT LEFT TO RIGHT) -->
+    <div style="background-image: linear-gradient(to right, rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.5)), url('YOUR-IMAGE-URL-HERE'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 40px; border-radius: 8px; margin-bottom: 24px; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;" role="img" aria-label="Department of Educational Excellence">
+        <p style="margin: 0 0 16px 0; color: #ffffff; font-size: 22px; line-height: 1.4; font-weight: 600; max-width: 600px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Department of Educational Excellence</p>
+        <p style="margin: 0 0 24px 0; color: #e8f7fc; font-size: 16px; line-height: 1.6; max-width: 550px; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Providing resources, support, and innovative programs to ensure every student reaches their full potential.</p>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #54c8eb; color: #003366; border: 2px solid #54c8eb; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Explore Our Services</a>
+    </div>
+    ```
+  </TabItem>
+</Tabs>
+
+## Button Styles Available
+
+| Style | `background-color` | `color` | `border` | Best Paired With |
+|---|---|---|---|---|
+| **Primary Navy** | `#003366` | `#ffffff` | `2px solid #003366` | Department, Info Callout, Announcement |
+| **Light Blue** | `#54c8eb` | `#003366` | `2px solid #54c8eb` | Centered Text, Left Gradient image |
+| **Gold** | `#f0ad4e` | `#003366` | `2px solid #f0ad4e` | Welcome Hero, Dark Overlay image |
+| **Outline** | `transparent` | `#003366` | `2px solid #003366` | Page Intro (secondary action), Light Overlay image |
+| **Alt Navy** | `#3a57a8` | `#ffffff` | `2px solid #3a57a8` | Minimal Hero |
+
+## Customization Guide
+
+<Steps>
+1. **Change subtitle text** — Update the first `<p>` tag content. Keep to 1–2 sentences maximum.
+
+2. **Change description text** — Update the second `<p>` tag content. Keep to 2–3 sentences maximum.
+
+3. **Add a button** — Copy a button `<a>` tag from the Button Styles table above and paste it after the last `<p>` tag inside the hero `<div>`.
+
+4. **Change button text** — Replace the text between the opening and closing `<a>` tags with your action-oriented label (e.g., "Enroll Now", "Get Started", "View Resources").
+
+5. **Change button URL** — Update the `href="https://www.example.com"` attribute with your actual destination URL.
+
+6. **Change button color** — Swap the `background-color`, `color`, and `border` values using the Button Styles table above.
+
+7. **Add a second button** — Wrap both `<a>` buttons in a flex container: `<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">...</div>`. See Page Intro and Light Overlay examples.
+
+8. **Change the icon** (Info Callout) — Replace the `ℹ` Unicode character in the `<span>` with another symbol (e.g., `●`, `★`, `✓`, `⚠`).
+
+9. **Adjust spacing** — Modify `padding` values (e.g., `30px`, `40px`) on the outer `<div>` for more or less vertical space.
+
+10. **Remove elements** — Delete an entire `<p>` or `<a>` tag for a simpler, stripped-down version of any hero.
+
+11. **Change background image** — Replace `YOUR-IMAGE-URL-HERE` with your image URL. Use high-resolution images (1920×800px minimum).
+
+12. **Adjust overlay darkness** — Change the `rgba()` opacity value: `0.5` = 50% dark, `0.75` = 75% dark, `0.85` = 85% light, `0.9` = 90% dark.
+
+13. **Change overlay gradient direction** — Replace `linear-gradient(rgba(...), rgba(...))` with `linear-gradient(to top, ...)` for bottom-to-top or `linear-gradient(to right, ...)` for left-to-right.
+
+14. **Change text alignment for image heroes** — Modify `justify-content` (center / flex-start / flex-end) and `align-items` (center / flex-start / flex-end) on the outer `<div>`.
+
+15. **Adjust minimum height** — Change `min-height` (e.g., `300px`, `400px`, `500px`) for taller or shorter image heroes.
+</Steps>
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- No `<h1>` tags — Edlio CMS provides the page title; heroes use `<p>` tags to maintain correct heading hierarchy
+- `aria-hidden="true"` on decorative icon `<span>` elements hides them from screen readers
+- `role="img"` and `aria-label` on image background heroes provide context to screen reader users
+- `text-shadow` on image backgrounds ensures text remains readable over varied image content
+- All color combinations meet **WCAG 2.1 AA** contrast standards (4.5:1 minimum ratio for text)
+- Dark and light overlays ensure text readability regardless of the underlying image
+- Button `<a>` tags include descriptive, action-oriented text for clear link context
+- Flexbox layouts are keyboard-accessible with proper focus states
+</Aside>
+
+## Best Practices
+
+<Aside type="tip" title="Do's">
+- Place the hero **immediately after the Edlio CMS page title** — it should be the first content element
+- Use **one hero per page** for maximum impact
+- Keep subtitle text to **1–2 sentences maximum**
+- Keep description text to **2–3 sentences maximum**
+- Use **action-oriented button text** — "Get Started", "Learn More", "Enroll Now", "View Resources"
+- **Match the hero type to page context** — Welcome for district pages, Department for department pages, Info Callout for process pages, Announcement for urgent notices
+- **Test on mobile devices** before publishing to ensure proper rendering
+- **Update all button URLs** from `https://www.example.com` before publishing
+- Use **optimized, compressed images** for image background heroes
+</Aside>
+
+<Aside type="caution" title="Don'ts">
+- Don't add `<h1>`, `<h2>`, or `<h3>` tags inside hero components — the CMS manages heading hierarchy
+- Don't use more than **two buttons** in a single hero — it dilutes the call to action
+- Don't use image background heroes with low-contrast or busy images — always verify text readability
+- Don't use `YOUR-IMAGE-URL-HERE` placeholder in published content
+- Don't use heroes for layout structuring — they are page introductions only, not content containers
+</Aside>

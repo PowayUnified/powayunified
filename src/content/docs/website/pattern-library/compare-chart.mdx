@@ -1,0 +1,411 @@
+---
+title: Compare Chart
+description: Side-by-side feature comparisons with checkmarks, pricing, and highlighted options.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**The Compare Chart Component** provides accessible, branded comparison tables for side-by-side feature analysis. Perfect for comparing plans, programs, policies, or options. Simply copy and paste any comparison chart below directly into the Edlio WYSIWYG editor.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Visual Indicators" icon="approve-check-circle">
+    Green ✓ checkmarks and red ✗ X marks communicate availability at a glance — reinforced with color and symbol for accessibility.
+  </Card>
+  <Card title="Highlighted Recommended Option" icon="star">
+    Gold border and `RECOMMENDED` badge visually elevate a featured column without disrupting the table structure.
+  </Card>
+  <Card title="6 Ready-to-Use Styles" icon="list-format">
+    Basic, Recommended, Navy Header, Before/After, Compact, and Gold Accent variants cover every comparison scenario.
+  </Card>
+  <Card title="No Dependencies" icon="information">
+    Pure HTML with inline CSS — paste directly into Edlio WYSIWYG with no stylesheets required.
+  </Card>
+</CardGrid>
+
+## When to Use Compare Charts
+
+| Use Case | Recommended Style | Columns |
+|---|---|---|
+| Program/plan comparison | Recommended (Gold highlight) | 3–4 |
+| School-level feature comparison | Navy Header | 3–4 |
+| Before/after policy changes | Before/After (Light Blue accent) | 2 |
+| Service availability by location | Compact (Minimal borders) | 2–3 |
+| Enrollment options | Gold Accent | 3–4 |
+| Quick yes/no feature list | Basic (3-Column) | 3 |
+
+## Visual Indicators
+
+| Symbol | Color | Meaning | Style |
+|---|---|---|---|
+| ✓ | `#28a745` (Green) | Available / Included / Yes | `font-size: 18px; color: #28a745;` |
+| ✗ | `#dc3545` (Red) | Not Available / Not Included / No | `font-size: 18px; color: #dc3545;` |
+| Descriptive text | `#333` | Full detail (e.g., "Advanced", "5 days/week") | `font-size: 14px; color: #333;` |
+| Partial text | `#666` | Limited availability (e.g., "Basic", "Limited") | `font-size: 14px; color: #666;` |
+| RECOMMENDED badge | `#f0ad4e` bg / white text | Highlights the preferred option | `background-color: #f0ad4e;` |
+
+## Copy-Paste Code
+
+<Tabs>
+  <TabItem label="Basic 3-Column">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef;"><thead><tr style="background-color: #f8f9fa;"><th style="padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333; width: 40%;">Features</th><th style="padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333;">Option A</th><th style="padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333;">Option B</th><th style="padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333;">Option C</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Basic Access</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr><tr style="background-color: #f8f9fa;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Advanced Features</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Priority Support</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPARE CHART - 3 COLUMN (BASIC) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef;">
+        <thead>
+            <tr style="background-color: #f8f9fa;">
+                <th style="padding: 16px 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333; width: 40%;">Features</th>
+                <th style="padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">Option A</th>
+                <th style="padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">Option B</th>
+                <th style="padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">Option C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Basic Access</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Advanced Features</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Priority Support</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Custom Integration</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Recommended Option">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef;"><thead><tr style="background-color: #f8f9fa;"><th style="padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333; width: 40%;">Program Features</th><th style="padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">Basic<br/><span style="font-size: 12px; font-weight: 400; color: #666;">Free</span></th><th style="padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 2px solid #f0ad4e; background-color: #fef9f0; color: #333;">Standard<br/><span style="font-size: 12px; font-weight: 400; color: #666;">$25/month</span><br/><span style="display: inline-block; background-color: #f0ad4e; color: white; padding: 3px 7px; font-size: 11px; font-weight: 600; border-radius: 3px; margin-top: 4px;">RECOMMENDED</span></th><th style="padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">Premium<br/><span style="font-size: 12px; font-weight: 400; color: #666;">$50/month</span></th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Enrollment</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Up to 50</td><td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 14px; color: #333; text-align: center;">Up to 200</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Unlimited</td></tr><tr style="background-color: #f8f9fa;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Parent Portal</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPARE CHART - WITH HIGHLIGHTED RECOMMENDED OPTION -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef;">
+        <thead>
+            <tr style="background-color: #f8f9fa;">
+                <th style="padding: 16px 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #dce0ef; color: #333; width: 40%;">Program Features</th>
+                <th style="padding: 16px 12px; text-align: center; font-weight: 600; font-size: 16px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">
+                    Basic<br>
+                    <span style="font-size: 12px; font-weight: 400; color: #666;">Free</span>
+                </th>
+                <th style="padding: 16px 12px; text-align: center; font-weight: 600; font-size: 16px; border: 2px solid #f0ad4e; background-color: #fef9f0; color: #333; position: relative;">
+                    Standard<br>
+                    <span style="font-size: 12px; font-weight: 400; color: #666;">$25/month</span><br>
+                    <span style="display: inline-block; background-color: #f0ad4e; color: white; padding: 4px 8px; font-size: 11px; font-weight: 600; border-radius: 3px; margin-top: 4px;">RECOMMENDED</span>
+                </th>
+                <th style="padding: 16px 12px; text-align: center; font-weight: 600; font-size: 16px; border: 1px solid #dce0ef; background-color: #ffffff; color: #333;">
+                    Premium<br>
+                    <span style="font-size: 12px; font-weight: 400; color: #666;">$50/month</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Enrollment</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Up to 50 students</td>
+                <td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 14px; color: #333; text-align: center;">Up to 200 students</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Unlimited</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Online Resources</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Progress Tracking</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Basic</td>
+                <td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 14px; color: #333; text-align: center;">Advanced</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Advanced + Analytics</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Parent Portal</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Technical Support</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Email</td>
+                <td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 14px; color: #333; text-align: center;">Email + Chat</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">24/7 Priority</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Custom Branding</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 2px solid #f0ad4e; background-color: #fef9f0; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Navy Header">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef;"><thead><tr><th style="background-color: #3a57a8; color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788; width: 40%;">School Programs</th><th style="background-color: #3a57a8; color: white; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Elementary</th><th style="background-color: #3a57a8; color: white; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Middle School</th><th style="background-color: #3a57a8; color: white; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">High School</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Grade Levels</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">K-5</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">6-8</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">9-12</td></tr><tr style="background-color: #f8f9fa;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Core Curriculum</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">AP/Honors Classes</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Honors Only</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPARE CHART - PUSD NAVY HEADER -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef;">
+        <thead>
+            <tr>
+                <th style="background-color: #3a57a8; color: white; padding: 16px 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788; width: 40%;">School Programs</th>
+                <th style="background-color: #3a57a8; color: white; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Elementary</th>
+                <th style="background-color: #3a57a8; color: white; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Middle School</th>
+                <th style="background-color: #3a57a8; color: white; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">High School</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Grade Levels</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">K-5</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">6-8</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">9-12</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Core Curriculum</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Foreign Language</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Introductory</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">AP/Honors Classes</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Honors Only</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Sports Programs</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Intramural</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Career Counseling</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Basic</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Comprehensive</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">STEAM Labs</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Before / After">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef;"><thead><tr style="background-color: #3a57a8;"><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788; width: 40%;">Feature</th><th style="color: white; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Previous Policy</th><th style="color: white; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788; background-color: #54c8eb; color: #003366;">New Policy</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Registration Period</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">March 1-31</td><td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 14px; color: #333; text-align: center;">Feb 2 - Mar 15</td></tr><tr style="background-color: #f8f9fa;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Online Submission</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Processing Time</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">10-15 days</td><td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 14px; color: #333; text-align: center;">5-7 days</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPARE CHART - 2 COLUMN COMPARISON (BEFORE/AFTER) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef;">
+        <thead>
+            <tr style="background-color: #3a57a8;">
+                <th style="color: white; padding: 16px 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788; width: 40%;">Feature</th>
+                <th style="color: white; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Previous Policy</th>
+                <th style="color: white; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #2a4788; background-color: #54c8eb; color: #003366;">New Policy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Registration Period</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">March 1-31</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 14px; color: #333; text-align: center;">February 2 - March 15</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Required Documents</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">4 documents</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 14px; color: #333; text-align: center;">3 documents</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Online Submission</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Processing Time</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">10-15 business days</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 14px; color: #333; text-align: center;">5-7 business days</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Email Confirmation</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; background-color: #e8f7fc; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Compact">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse;"><thead><tr style="background-color: #003366; border-bottom: 2px solid #003366;"><th style="color: white; padding: 10px; text-align: left; font-weight: 600; font-size: 14px; width: 50%;">Service</th><th style="color: white; padding: 10px; text-align: center; font-weight: 600; font-size: 14px;">Campus A</th><th style="color: white; padding: 10px; text-align: center; font-weight: 600; font-size: 14px;">Campus B</th></tr></thead><tbody><tr style="border-bottom: 1px solid #dce0ef;"><td style="padding: 10px; font-size: 14px; color: #333;">Library Hours</td><td style="padding: 10px; font-size: 14px; color: #333; text-align: center;">8am - 6pm</td><td style="padding: 10px; font-size: 14px; color: #333; text-align: center;">8am - 8pm</td></tr><tr style="border-bottom: 1px solid #dce0ef;"><td style="padding: 10px; font-size: 14px; color: #333;">Tutoring Center</td><td style="padding: 10px; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 10px; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr><tr><td style="padding: 10px; font-size: 14px; color: #333;">Parent Parking</td><td style="padding: 10px; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 10px; font-size: 18px; color: #dc3545; text-align: center;">✗</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPARE CHART - COMPACT VERSION WITH MINIMAL BORDERS -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0;">
+        <thead>
+            <tr style="background-color: #003366; border-bottom: 2px solid #003366;">
+                <th style="color: white; padding: 14px 10px; text-align: left; font-weight: 600; font-size: 14px; width: 50%;">Service</th>
+                <th style="color: white; padding: 14px 10px; text-align: center; font-weight: 600; font-size: 14px;">Campus A</th>
+                <th style="color: white; padding: 14px 10px; text-align: center; font-weight: 600; font-size: 14px;">Campus B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #dce0ef;">
+                <td style="padding: 10px; font-size: 14px; color: #333;">Library Hours</td>
+                <td style="padding: 10px; font-size: 14px; color: #333; text-align: center;">8am - 6pm</td>
+                <td style="padding: 10px; font-size: 14px; color: #333; text-align: center;">8am - 8pm</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #dce0ef;">
+                <td style="padding: 10px; font-size: 14px; color: #333;">Tutoring Center</td>
+                <td style="padding: 10px; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 10px; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #dce0ef;">
+                <td style="padding: 10px; font-size: 14px; color: #333;">Computer Lab Access</td>
+                <td style="padding: 10px; font-size: 14px; color: #666; text-align: center;">Limited</td>
+                <td style="padding: 10px; font-size: 14px; color: #333; text-align: center;">24/7</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 14px; color: #333;">Parent Parking</td>
+                <td style="padding: 10px; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 10px; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Gold Accent">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 2px solid #f0ad4e;"><thead><tr style="background-color: #f0ad4e;"><th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e; width: 40%;">Enrollment Options</th><th style="color: #ffffff; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">In-Person</th><th style="color: #ffffff; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Hybrid</th><th style="color: #ffffff; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Online</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Classroom Instruction</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">5 days/week</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">2-3 days/week</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td></tr><tr style="background-color: #fef9f0;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Live Video Sessions</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Extracurricular Activities</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Limited</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPARE CHART - GOLD ACCENT THEME -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 2px solid #f0ad4e;">
+        <thead>
+            <tr style="background-color: #f0ad4e;">
+                <th style="color: #ffffff; padding: 16px 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e; width: 40%;">Enrollment Options</th>
+                <th style="color: #ffffff; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">In-Person</th>
+                <th style="color: #ffffff; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Hybrid</th>
+                <th style="color: #ffffff; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Online</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Classroom Instruction</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">5 days/week</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">2-3 days/week</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+            </tr>
+            <tr style="background-color: #fef9f0;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Live Video Sessions</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Self-Paced Learning</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #dc3545; text-align: center;">✗</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Partial</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+            </tr>
+            <tr style="background-color: #fef9f0;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Extracurricular Activities</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 18px; color: #28a745; text-align: center;">✓</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Limited</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; font-weight: 600;">Technology Required</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #666; text-align: center;">Minimal</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">Moderate</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333; text-align: center;">High</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+</Tabs>
+
+## PUSD Brand Colors Reference
+
+| Color Name | HEX | Used In |
+|---|---|---|
+| PUSD Navy | `#003366` | Compact header |
+| PUSD Alt 3 (Deep Blue) | `#3a57a8` | Navy Header, Before/After header |
+| PUSD Light Blue | `#54c8eb` | Before/After "New Policy" column header |
+| PUSD Gold | `#f0ad4e` | Recommended badge, Gold Accent header |
+| PUSD Alt 1 (Light Gray-Blue) | `#dce0ef` | Cell borders throughout |
+| Recommended Tint | `#fef9f0` | Gold-highlighted column background |
+| Light Blue Tint | `#e8f7fc` | "New" column background in Before/After |
+| Check Green | `#28a745` | ✓ checkmark symbol color |
+| X Red | `#dc3545` | ✗ X mark symbol color |
+| Partial Gray | `#666` | Partial feature text |
+
+## Customization Guide
+
+<Steps>
+1. **Add or remove comparison columns** — Add a `<th>` in `<thead>` and a matching `<td>` in every `<tbody>` row. Keep `<th>` and `<td>` counts consistent across all rows.
+
+2. **Add or remove feature rows** — Copy an existing `<tr>...</tr>` block from `<tbody>`, paste it after the last row, and maintain the alternating `background-color` for correct striping.
+
+3. **Highlight a column as recommended** — Apply `border: 2px solid #f0ad4e;` and `background-color: #fef9f0;` to the `<th>` and all `<td>` cells in that column. Add the RECOMMENDED badge `<span>` inside the `<th>`.
+
+4. **Change symbol to descriptive text** — Replace `✓` or `✗` with text such as `"Limited"`, `"Basic"`, or a numeric value. Set `font-size: 14px; color: #333;` on the `<td>` for text content.
+
+5. **Add pricing to column headers** — Use `<br>` and a `<span style="font-size: 12px; font-weight: 400; color: #666;">` tag inside `<th>` for a subtitle line below the column name.
+
+6. **Change the header color theme** — Replace `background-color` on the `<tr>` inside `<thead>`. Update `border` colors on `<th>` to match (e.g., swap `#3a57a8` + `#2a4788` for Navy, or `#f0ad4e` + `#e09d3e` for Gold).
+
+7. **Adjust first column width** — Change `width: 40%;` on the first `<th>` to `50%` for a wider feature label column, especially useful for longer feature names.
+
+8. **Bold feature category rows** — Add `font-weight: 600;` to a `<td>` in the first column to create visual groupings within the feature list.
+</Steps>
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- Semantic `<table>`, `<thead>`, `<tbody>`, `<th>`, and `<td>` structure for correct screen reader interpretation
+- `<th>` column headers automatically provide context for each comparison column
+- Both **color** (green/red) and **symbols** (✓/✗) are used together — color is never the only differentiator
+- All color combinations meet **WCAG AA** contrast standards
+- Minimum `font-size: 14px` for text content, `18px` for symbols to ensure legibility
+- Descriptive text values (e.g., "Limited", "Advanced") provide nuance beyond binary yes/no for users relying on screen readers
+</Aside>
+
+## Best Practices
+
+<Aside type="tip" title="Do's">
+- **Limit to 3–4 comparison columns** for readability, especially on mobile
+- **Use descriptive labels** in the first column — be specific about what is being compared
+- **Use ✓ and ✗ consistently** throughout a single chart — don't mix with other symbols mid-table
+- **Highlight only one column** as recommended to avoid confusion
+- **Use bold text** in the first column to create visual feature category groupings
+- **Keep the first column left-aligned** and center-align all comparison data columns
+- **Provide context** above the chart with a sentence explaining what is being compared
+- **Limit rows to 8–10 features** for easy scanning without overwhelming the viewer
+</Aside>
+
+<Aside type="caution" title="Don'ts">
+- Don't use more than 4 comparison columns — tables become unreadable on mobile beyond that
+- Don't highlight more than one column as "recommended" — it loses meaning
+- Don't rely on color alone to convey pass/fail — always pair with ✓/✗ symbols
+- Don't omit `<thead>` — it is required for screen reader column context
+- Don't use compare charts for non-tabular layout purposes
+</Aside>

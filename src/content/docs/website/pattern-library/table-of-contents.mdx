@@ -1,0 +1,416 @@
+---
+title: Table of Contents
+description: Navigation for long-form content with sticky positioning and hierarchical support.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**The Table of Contents Component** provides navigation for long-form content, helping users quickly jump to specific sections of a page. Enhances user experience by making lengthy pages easier to navigate and scan.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Sticky Positioning" icon="rocket">
+    Stays visible as users scroll down long pages. Automatically falls back to static positioning on mobile via a responsive media query.
+  </Card>
+  <Card title="Hierarchical Support" icon="list-format">
+    Nested subsections with `padding-left: 24px` indentation clearly convey page structure at a glance.
+  </Card>
+  <Card title="4 Color Themes" icon="seti:css">
+    Default (white), Navy, Light Blue, and Gold Accent variants match any page context or department branding.
+  </Card>
+  <Card title="Accessible Markup" icon="approve-check-circle">
+    Semantic `<nav>` with `aria-label`, `<h2>` heading, and `<ul>` list structure for full screen reader and keyboard support.
+  </Card>
+</CardGrid>
+
+## Variants Overview
+
+| Variant | Background | Border | Best Used For |
+|---|---|---|---|
+| **Default** | White `#ffffff` | Light Blue `#54c8eb` | General long-form pages |
+| **Navy** | Navy `#003366` | Light Blue `#54c8eb` | Pages using dark hero or navy sections |
+| **Light Blue** | Light Blue tint `#e8f7fc` | Navy `#003366` | Information, resource, or enrollment pages |
+| **Gold Accent** | Cream `#fef9f0` | Gold `#f0ad4e` | Announcements, event pages, spotlights |
+| **Hierarchical** | White `#ffffff` | Light Blue `#54c8eb` | Complex pages with nested subsections |
+| **Compact (On This Page)** | Light Blue tint `#e8f7fc` | Light Blue `#54c8eb` | Shorter pages; non-sticky inline use |
+
+## Copy-Paste Code
+
+<Aside type="caution" title="Style Block Required">
+Hover, focus, and active link states require a `<style>` block — CSS pseudo-classes cannot be applied with inline styles alone. **Copy the entire snippet including the `<style>` block** and paste both together into Edlio WYSIWYG editor.
+</Aside>
+
+<Tabs>
+  <TabItem label="Default">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><nav aria-label="Table of Contents" style="background-color: #ffffff; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 260px;"><h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">Table of Contents</h2><ul style="list-style: none; margin: 0; padding: 0;"><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Introduction</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Getting Started</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Key Information</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Contact &amp; Resources</a></li></ul></nav></div></div>
+    ```html
+    <!-- DEFAULT TABLE OF CONTENTS (WHITE BACKGROUND, STICKY) -->
+    <style>
+    nav[aria-label="Table of Contents"] a:hover {
+        background-color: #e8f7fc;
+        border-left-color: #54c8eb;
+    }
+
+    nav[aria-label="Table of Contents"] a:focus {
+        outline: 2px solid #54c8eb;
+        outline-offset: 2px;
+    }
+
+    nav[aria-label="Table of Contents"] a:active {
+        background-color: #54c8eb;
+        color: #ffffff;
+        border-left-color: #54c8eb;
+    }
+
+    @media (max-width: 768px) {
+        nav[aria-label="Table of Contents"] {
+            position: relative !important;
+            top: auto !important;
+        }
+    }
+    </style>
+    <nav aria-label="Table of Contents" style="position: sticky; top: 12px; background-color: #ffffff; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 100%;">
+        <h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">Table of Contents</h2>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Introduction</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Getting Started</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Key Information</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-4" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Contact &amp; Resources</a>
+            </li>
+        </ul>
+    </nav>
+    ```
+  </TabItem>
+  <TabItem label="Navy">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><nav aria-label="Table of Contents - Navy" style="background-color: #003366; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 260px;"><h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #ffffff; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">Table of Contents</h2><ul style="list-style: none; margin: 0; padding: 0;"><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Introduction</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Getting Started</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Key Information</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Contact &amp; Resources</a></li></ul></nav></div></div>
+    ```html
+    <!-- NAVY TABLE OF CONTENTS (DARK BACKGROUND) -->
+    <style>
+    nav[aria-label="Table of Contents - Navy"] a:hover {
+        background-color: rgba(84, 200, 235, 0.2);
+        border-left-color: #54c8eb;
+    }
+
+    nav[aria-label="Table of Contents - Navy"] a:focus {
+        outline: 2px solid #54c8eb;
+        outline-offset: 2px;
+    }
+
+    nav[aria-label="Table of Contents - Navy"] a:active {
+        background-color: #54c8eb;
+        color: #003366;
+        border-left-color: #54c8eb;
+    }
+
+    @media (max-width: 768px) {
+        nav[aria-label="Table of Contents - Navy"] {
+            position: relative !important;
+            top: auto !important;
+        }
+    }
+    </style>
+    <nav aria-label="Table of Contents - Navy" style="position: sticky; top: 12px; background-color: #003366; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 100%;">
+        <h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #ffffff; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">Table of Contents</h2>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-1" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Introduction</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Getting Started</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Key Information</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-4" style="display: block; color: #ffffff; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Contact &amp; Resources</a>
+            </li>
+        </ul>
+    </nav>
+    ```
+  </TabItem>
+  <TabItem label="Light Blue">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><nav aria-label="Table of Contents - Light" style="background-color: #e8f7fc; border: 1px solid #003366; border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 260px;"><h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #003366; padding-bottom: 6px;">Table of Contents</h2><ul style="list-style: none; margin: 0; padding: 0;"><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Introduction</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Getting Started</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Key Information</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Contact &amp; Resources</a></li></ul></nav></div></div>
+    ```html
+    <!-- LIGHT BLUE TABLE OF CONTENTS -->
+    <style>
+    nav[aria-label="Table of Contents - Light"] a:hover {
+        background-color: #ffffff;
+        border-left-color: #003366;
+    }
+
+    nav[aria-label="Table of Contents - Light"] a:focus {
+        outline: 2px solid #003366;
+        outline-offset: 2px;
+    }
+
+    nav[aria-label="Table of Contents - Light"] a:active {
+        background-color: #003366;
+        color: #ffffff;
+        border-left-color: #003366;
+    }
+
+    @media (max-width: 768px) {
+        nav[aria-label="Table of Contents - Light"] {
+            position: relative !important;
+            top: auto !important;
+        }
+    }
+    </style>
+    <nav aria-label="Table of Contents - Light" style="position: sticky; top: 12px; background-color: #e8f7fc; border: 1px solid #003366; border-radius: 6px; padding: 12px 14px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 100%;">
+        <h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #003366; padding-bottom: 6px;">Table of Contents</h2>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Introduction</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Getting Started</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Key Information</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-4" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Contact &amp; Resources</a>
+            </li>
+        </ul>
+    </nav>
+    ```
+  </TabItem>
+  <TabItem label="Gold Accent">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><nav aria-label="Table of Contents - Gold" style="background-color: #fef9f0; border: 1px solid #f0ad4e; border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 260px;"><h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #f0ad4e; padding-bottom: 6px;">Table of Contents</h2><ul style="list-style: none; margin: 0; padding: 0;"><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Introduction</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Getting Started</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Key Information</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">Contact &amp; Resources</a></li></ul></nav></div></div>
+    ```html
+    <!-- GOLD ACCENT TABLE OF CONTENTS -->
+    <style>
+    nav[aria-label="Table of Contents - Gold"] a:hover {
+        background-color: #ffffff;
+        border-left-color: #f0ad4e;
+    }
+
+    nav[aria-label="Table of Contents - Gold"] a:focus {
+        outline: 2px solid #f0ad4e;
+        outline-offset: 2px;
+    }
+
+    nav[aria-label="Table of Contents - Gold"] a:active {
+        background-color: #f0ad4e;
+        color: #003366;
+        border-left-color: #f0ad4e;
+    }
+
+    @media (max-width: 768px) {
+        nav[aria-label="Table of Contents - Gold"] {
+            position: relative !important;
+            top: auto !important;
+        }
+    }
+    </style>
+    <nav aria-label="Table of Contents - Gold" style="position: sticky; top: 12px; background-color: #fef9f0; border: 1px solid #f0ad4e; border-radius: 6px; padding: 12px 14px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 100%;">
+        <h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #f0ad4e; padding-bottom: 6px;">Table of Contents</h2>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Introduction</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Getting Started</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Key Information</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-4" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">Contact &amp; Resources</a>
+            </li>
+        </ul>
+    </nav>
+    ```
+  </TabItem>
+  <TabItem label="Hierarchical">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><nav aria-label="Table of Contents - Hierarchical" style="background-color: #ffffff; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 260px;"><h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">Table of Contents</h2><ul style="list-style: none; margin: 0; padding: 0;"><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">1. Introduction</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">2. Getting Started</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px 6px 24px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">2.1 Prerequisites</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px 6px 24px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">2.2 Registration Process</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">3. Key Information</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px 6px 24px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">3.1 Important Dates</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px 6px 24px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">3.2 Required Documents</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; border-left: 2px solid transparent;">4. Contact &amp; Resources</a></li></ul></nav></div></div>
+    ```html
+    <!-- NESTED/HIERARCHICAL TABLE OF CONTENTS (with sub-sections) -->
+    <style>
+    nav[aria-label="Table of Contents - Hierarchical"] a:hover {
+        background-color: #e8f7fc;
+        border-left-color: #54c8eb;
+    }
+
+    nav[aria-label="Table of Contents - Hierarchical"] a:focus {
+        outline: 2px solid #54c8eb;
+        outline-offset: 2px;
+    }
+
+    nav[aria-label="Table of Contents - Hierarchical"] a:active {
+        background-color: #54c8eb;
+        color: #ffffff;
+        border-left-color: #54c8eb;
+    }
+
+    @media (max-width: 768px) {
+        nav[aria-label="Table of Contents - Hierarchical"] {
+            position: relative !important;
+            top: auto !important;
+        }
+    }
+    </style>
+    <nav aria-label="Table of Contents - Hierarchical" style="position: sticky; top: 12px; background-color: #ffffff; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 100%;">
+        <h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">Table of Contents</h2>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">1. Introduction</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">2. Getting Started</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 24px;">2.1 Prerequisites</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 24px;">2.2 Registration Process</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">3. Key Information</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 24px;">3.1 Important Dates</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 24px;">3.2 Required Documents</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-4" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease; border-left: 2px solid transparent;">4. Contact &amp; Resources</a>
+            </li>
+        </ul>
+    </nav>
+    ```
+  </TabItem>
+  <TabItem label="Compact">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><nav aria-label="On This Page" style="background-color: #e8f7fc; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 260px;"><h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">On This Page</h2><ul style="list-style: none; margin: 0; padding: 0;"><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4;">Introduction</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4;">Getting Started</a></li><li style="margin: 0; padding: 0;"><a href="#" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4;">Contact</a></li></ul></nav></div></div>
+    ```html
+    <!-- COMPACT TABLE OF CONTENTS (Non-Sticky, for shorter pages) -->
+    <style>
+    nav[aria-label="On This Page"] a:hover {
+        background-color: #ffffff;
+        border-left-color: #54c8eb;
+    }
+
+    nav[aria-label="On This Page"] a:focus {
+        outline: 2px solid #54c8eb;
+        outline-offset: 2px;
+    }
+
+    nav[aria-label="On This Page"] a:active {
+        background-color: #54c8eb;
+        color: #ffffff;
+    }
+    </style>
+    <nav aria-label="On This Page" style="background-color: #e8f7fc; border: 1px solid #54c8eb; border-radius: 6px; padding: 12px 14px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 100%;">
+        <h2 style="margin: 0 0 10px 0; font-size: 15px; font-weight: 700; color: #003366; border-bottom: 2px solid #54c8eb; padding-bottom: 6px;">On This Page</h2>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-1" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease;">Introduction</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-2" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease;">Getting Started</a>
+            </li>
+            <li style="margin: 0; padding: 0;">
+                <a href="#section-3" style="display: block; color: #003366; text-decoration: none; padding: 6px 8px; border-radius: 3px; font-size: 13px; font-weight: 500; line-height: 1.4; transition: all 0.3s ease;">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    ```
+  </TabItem>
+</Tabs>
+
+## Anchor Link Setup
+
+The TOC is only functional when each `href` points to a matching `id` on a heading in your page content. Add `id` attributes to your section headings after pasting the TOC.
+
+```html
+<!-- In your TOC -->
+<a href="#introduction">Introduction</a>
+
+<!-- In your page content -->
+<h2 id="introduction">Introduction</h2>
+<p>Your introduction content here...</p>
+
+<!-- Another section -->
+<h2 id="getting-started">Getting Started</h2>
+<p>Your getting started content here...</p>
+```
+
+## Indentation Levels for Hierarchical Items
+
+| Level | `padding-left` Value | Example |
+|---|---|---|
+| Top-level item | `8px` (default) | `1. Introduction` |
+| Level 2 subsection | `24px` | `1.1 Prerequisites` |
+| Level 3 subsection | `40px` | `1.1.1 Details` |
+
+## Customization Guide
+
+<Steps>
+1. **Change the heading text** — Update the text inside the `<h2>` tag. Common alternatives: `"Contents"`, `"On This Page"`, `"In This Guide"`.
+
+2. **Add a link item** — Copy an existing `<li>...</li>` block, paste it after the last `<li>`, and update the `href` and link text.
+
+3. **Remove a link item** — Delete the entire `<li>...</li>` block for any section you don't need.
+
+4. **Update anchor links** — Change `href="#section-1"` on each `<a>` to match the `id` attribute on the corresponding section heading in your page (e.g., `href="#enrollment-dates"`).
+
+5. **Add nested subsections** — Copy a top-level `<li>` and add `padding-left: 24px;` to the `<a>` style. Use a numbered label like `2.1 Prerequisites` for clarity.
+
+6. **Remove sticky behavior** — Delete `position: sticky; top: 12px;` from the `<nav>` style attribute. The TOC will render inline with the page flow.
+
+7. **Change the accent color** — Replace the border and hover color values in the `<style>` block and on the `<h2>` `border-bottom`. Use the PUSD Brand Colors table below for available values.
+
+8. **Adjust spacing** — Modify `padding` on the `<nav>` (e.g., `16px 20px` for more space) and `padding` on `<a>` elements (e.g., `8px 10px`) for tighter or looser link rows.
+</Steps>
+
+## PUSD Brand Colors Reference
+
+| Theme | Background | Border | Heading `border-bottom` | Link Color |
+|---|---|---|---|---|
+| Default | `#ffffff` | `#54c8eb` | `#54c8eb` | `#003366` |
+| Navy | `#003366` | `#54c8eb` | `#54c8eb` | `#ffffff` |
+| Light Blue | `#e8f7fc` | `#003366` | `#003366` | `#003366` |
+| Gold Accent | `#fef9f0` | `#f0ad4e` | `#f0ad4e` | `#003366` |
+| Compact | `#e8f7fc` | `#54c8eb` | `#54c8eb` | `#003366` |
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- `<nav>` element with a unique `aria-label` identifies the TOC as a landmark region for screen readers
+- `<h2>` inside the `<nav>` provides a visible and programmatic label for the block
+- `<ul>` and `<li>` list structure ensures screen readers enumerate TOC items correctly
+- Each `<a>` has `outline: 2px solid` on `:focus` for keyboard navigation visibility
+- The `border-left` indicator on `:hover` and `:active` provides clear interaction feedback
+- Descriptive link text (not "click here") gives context to screen reader users navigating by links
+- `transition: all 0.3s ease` on links respects fluid interaction without causing disorientation
+</Aside>
+
+## Best Practices
+
+<Aside type="tip" title="Do's">
+- Use a TOC for pages with **3 or more major sections** or 1,000+ words of content
+- **Place the TOC near the top** of the page content, before the first section heading
+- Keep link labels **3–6 words** for easy scanning
+- **Match the TOC order** exactly to the page section order — don't rearrange
+- Use **numbered labels** (`1.`, `2.1`, etc.) for hierarchical TOCs to reinforce structure
+- **Test every anchor link** after pasting to confirm each `href` resolves to a valid section `id`
+- Use the **Compact (non-sticky) variant** for shorter pages or when sticky behavior isn't appropriate
+- **Use one TOC style consistently** across similar pages within a site section
+</Aside>
+
+<Aside type="caution" title="Don'ts">
+- Don't use a TOC for pages with fewer than 3 sections — it adds noise without value
+- Don't copy only the `<nav>` block without the `<style>` block — hover and focus states will be missing
+- Don't use placeholder `href="#section-1"` links on published pages — update all anchors before publishing
+- Don't nest more than **2 levels deep** — deeper nesting becomes difficult to scan
+- Don't modify the `aria-label` value without also updating the matching CSS selectors in the `<style>` block — the hover styles will break
+</Aside>

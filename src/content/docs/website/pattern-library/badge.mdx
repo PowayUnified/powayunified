@@ -1,0 +1,265 @@
+---
+title: Badge
+description: Small, inline labels for status indicators, counts, and tags.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**Badges** are small, inline labels used to highlight key information, categorize content, or indicate status. They provide quick visual identification and improve content scannability.
+
+This component is designed for easy copy-paste use in the Edlio CMS WYSIWYG editor with zero dependencies.
+
+## Key Features
+
+<CardGrid>
+  <Card title="No Dependencies" icon="approve-check-circle">
+    Pure HTML and inline CSS — works immediately in Edlio CMS with no external stylesheets or scripts.
+  </Card>
+  <Card title="Brand Compliant" icon="star">
+    Uses official PUSD colors: Navy (`#003366`), Light Blue (`#54c8eb`), and Gold (`#f0ad4e`), plus semantic status colors.
+  </Card>
+  <Card title="Multiple Variants" icon="list-format">
+    Six style categories: Primary, Secondary, Semantic Status, Outline, Size Variants, and Pill — plus contextual usage examples.
+  </Card>
+  <Card title="Accessible" icon="information">
+    Semantic `<span>` elements, WCAG AA contrast ratios, font-weight 600, and full screen reader compatibility with no JavaScript required.
+  </Card>
+</CardGrid>
+
+## Variants
+
+### Primary Brand Colors
+
+Use these for main content categories and primary information.
+
+| Badge | Background | Text | Use For |
+|---|---|---|---|
+| PUSD Navy | `#003366` | `#ffffff` | Primary brand, important categories |
+| Light Blue | `#54c8eb` | `#003366` | Secondary brand, informational |
+| Gold | `#f0ad4e` | `#ffffff` | Accent, warnings, highlights |
+
+### Secondary Colors
+
+Use these for supporting information and subtle categorization.
+
+| Badge | Background | Text | Use For |
+|---|---|---|---|
+| Alt 1 | `#dce0ef` | `#003366` | Subtle emphasis |
+| Alt 2 | `#a5afd6` | `#003366` | Moderate emphasis |
+| Alt 3 | `#3a57a8` | `#ffffff` | Strong emphasis |
+
+### Semantic Status
+
+Use these to indicate status, outcomes, or alert levels.
+
+| Badge | Background | Text | Use For |
+|---|---|---|---|
+| Success | `#4caf50` | `#ffffff` | Positive status, confirmations |
+| Info | `#54c8eb` | `#003366` | Informational status |
+| Warning | `#f0ad4e` | `#ffffff` | Caution, non-critical notices |
+| Error | `#d32f2f` | `#ffffff` | Errors, critical issues |
+
+## Copy-Paste Code
+
+Select any snippet below and paste it directly into the Edlio CMS WYSIWYG editor.
+
+<Tabs>
+  <TabItem label="Primary">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; display: flex; gap: 8px; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">PUSD Navy</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Light Blue</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #f0ad4e; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Gold</span></div></div>
+    ```html
+    <!-- PUSD NAVY BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">PUSD Navy</span>
+
+    <!-- PUSD LIGHT BLUE BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Light Blue</span>
+
+    <!-- PUSD GOLD BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #f0ad4e; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Gold</span>
+    ```
+  </TabItem>
+  <TabItem label="Secondary">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; display: flex; gap: 8px; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #dce0ef; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Alt 1</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #a5afd6; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Alt 2</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #3a57a8; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Alt 3</span></div></div>
+    ```html
+    <!-- PUSD ALT 1 BADGE (Light Gray-Blue) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #dce0ef; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Alt 1</span>
+
+    <!-- PUSD ALT 2 BADGE (Medium Blue) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #a5afd6; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Alt 2</span>
+
+    <!-- PUSD ALT 3 BADGE (Deep Blue) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #3a57a8; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Alt 3</span>
+    ```
+  </TabItem>
+  <TabItem label="Status">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; display: flex; gap: 8px; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #4caf50; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Success</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Info</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #f0ad4e; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Warning</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #d32f2f; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Error</span></div></div>
+    ```html
+    <!-- SUCCESS BADGE (Green) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #4caf50; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Success</span>
+
+    <!-- INFO BADGE (Light Blue) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Info</span>
+
+    <!-- WARNING BADGE (Gold) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #f0ad4e; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Warning</span>
+
+    <!-- ERROR BADGE (Red) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #d32f2f; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Error</span>
+    ```
+  </TabItem>
+  <TabItem label="Outline">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; display: flex; gap: 8px; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #003366;">Outline Navy</span><span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #54c8eb; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #54c8eb;">Outline Blue</span><span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #f0ad4e; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #f0ad4e;">Outline Gold</span><span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #3a57a8; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #3a57a8;">Outline Alt 3</span></div></div>
+    ```html
+    <!-- OUTLINE NAVY BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #003366;">Outline Navy</span>
+
+    <!-- OUTLINE LIGHT BLUE BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #54c8eb; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #54c8eb;">Outline Blue</span>
+
+    <!-- OUTLINE GOLD BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #f0ad4e; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #f0ad4e;">Outline Gold</span>
+
+    <!-- OUTLINE ALT 3 BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 12px; background-color: transparent; color: #3a57a8; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap; border: 2px solid #3a57a8;">Outline Alt 3</span>
+    ```
+  </TabItem>
+  <TabItem label="Sizes">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #003366; color: #ffffff; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Small</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Medium</span><span style="display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 14px; background-color: #003366; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Large</span></div></div>
+    ```html
+    <!-- SMALL BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #003366; color: #ffffff; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Small</span>
+
+    <!-- MEDIUM BADGE (Default) -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Medium</span>
+
+    <!-- LARGE BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 14px; background-color: #003366; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Large</span>
+    ```
+  </TabItem>
+  <TabItem label="Pill">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; display: flex; gap: 8px; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Pill Navy</span><span style="display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Pill Blue</span><span style="display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background-color: #f0ad4e; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Pill Gold</span></div></div>
+    ```html
+    <!-- PILL NAVY BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Pill Navy</span>
+
+    <!-- PILL LIGHT BLUE BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Pill Blue</span>
+
+    <!-- PILL GOLD BADGE -->
+    <span style="display: inline-flex; align-items: center; padding: 4px 14px; border-radius: 999px; background-color: #f0ad4e; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Pill Gold</span>
+    ```
+  </TabItem>
+  <TabItem label="In Context">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><p style="margin: 10px 0; line-height: 1.8;">This page was last updated on <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #54c8eb; color: #003366; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">December 2025</span></p><h3 style="margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">Department Contacts <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #4caf50; color: #ffffff; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Updated</span> <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #f0ad4e; color: #ffffff; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Important</span></h3><div style="display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0;"><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Technology</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #3a57a8; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Business Services</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Learning Support</span><span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #a5afd6; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Personnel</span></div></div></div>
+    ```html
+    <!-- BADGE WITH INLINE TEXT -->
+    <p style="margin: 10px 0; line-height: 1.8;">
+        This page was last updated on
+        <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #54c8eb; color: #003366; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">December 2025</span>
+    </p>
+
+    <!-- BADGES IN A HEADING -->
+    <h3 style="margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        Department Contacts
+        <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #4caf50; color: #ffffff; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Updated</span>
+        <span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; background-color: #f0ad4e; color: #ffffff; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Important</span>
+    </h3>
+
+    <!-- BADGE GROUP / BADGE LIST -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0;">
+        <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #003366; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Technology</span>
+        <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #3a57a8; color: #ffffff; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Business Services</span>
+        <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #54c8eb; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Learning Support</span>
+        <span style="display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 12px; background-color: #a5afd6; color: #003366; font-size: 14px; font-weight: 600; line-height: 1.5; white-space: nowrap;">Personnel</span>
+    </div>
+    ```
+  </TabItem>
+</Tabs>
+
+## Customization Guide
+
+### Color Reference
+
+| Color Name | HEX | Text Color | Use For |
+|---|---|---|---|
+| PUSD Navy | `#003366` | `#ffffff` | Primary brand, important categories |
+| PUSD Light Blue | `#54c8eb` | `#003366` | Secondary brand, informational |
+| PUSD Gold | `#f0ad4e` | `#ffffff` | Accent, warnings, highlights |
+| Alt 1 (Light Gray-Blue) | `#dce0ef` | `#003366` | Subtle emphasis |
+| Alt 2 (Medium Blue) | `#a5afd6` | `#003366` | Moderate emphasis |
+| Alt 3 (Deep Blue) | `#3a57a8` | `#ffffff` | Strong emphasis |
+| Success (Green) | `#4caf50` | `#ffffff` | Positive status |
+| Error (Red) | `#d32f2f` | `#ffffff` | Negative status |
+
+### Size Reference
+
+| Size | `padding` | `font-size` | `border-radius` |
+|---|---|---|---|
+| Small | `2px 8px` | `12px` | `10px` |
+| Medium (Default) | `4px 12px` | `14px` | `12px` |
+| Large | `6px 16px` | `16px` | `14px` |
+
+<Aside type="note" title="Outline Size Adjustment">
+Outline badges use `padding: 3px 11px` (1px less on each side) to compensate for the `border: 2px solid` and maintain the same visual height as filled badges.
+</Aside>
+
+### Quick Customization Tips
+
+<Steps>
+1. **Change the text** — Replace the content between the `<span>` tags.
+
+2. **Change the color** — Update `background-color` and `color` values using the HEX codes from the color reference table above.
+
+3. **Make it an outline badge** — Set `background-color: transparent`, reduce padding by 1px on each side, and add `border: 2px solid [color]`.
+
+4. **Make it a pill shape** — Change `border-radius` to `999px`.
+
+5. **Adjust the size** — Modify `padding` and `font-size` using the size reference table above.
+
+6. **Group multiple badges** — Wrap them in a flex container:
+   ```html
+   <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+     <!-- badges go here -->
+   </div>
+   ```
+</Steps>
+
+## When to Use Badges
+
+| Use Case | Example | Recommended Variant |
+|---|---|---|
+| Status indicators | New, Updated, Active | Semantic (Success, Info, Warning) |
+| Category labels | Department names, subject areas | Primary or Secondary |
+| Dates and timestamps | December 2025, Q3 | Small, Light Blue |
+| Tags and keywords | Technology, Arts, STEM | Primary or Secondary group |
+| Counts and metrics | 12 Items, 3 New | Small, Navy or Gold |
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- Semantic `<span>` elements for proper inline display
+- All color combinations meet **WCAG AA** contrast standards for readability
+- Font weight `600` ensures clarity at all sizes and screen densities
+- No JavaScript required — works with all assistive technologies
+- `inline-flex` layout ensures correct alignment within text and headings
+- `white-space: nowrap` prevents awkward mid-word wrapping inside badges
+</Aside>
+
+## Best Practices
+
+<Aside type="tip" title="Do's">
+- Keep badge text short — **1 to 3 words** maximum
+- Use **consistent colors** for similar types of information across a page
+- Choose **appropriate size** based on the surrounding content hierarchy
+- **Group related badges** together with consistent spacing (`gap: 8px`)
+- Use **semantic colors** (Success, Warning, Error) for status indicators
+- Use **outline style** for secondary or supplemental information
+</Aside>
+
+<Aside type="caution" title="Don'ts">
+- Avoid using **too many badges** in one area — it causes visual clutter
+- Don't use badges for **long text** — use the Alert component instead
+- Avoid mixing **too many different colors** in a single badge group
+- Don't use **low-contrast** color combinations
+- Avoid using badges as **clickable buttons** — use a proper Button component
+- Don't override the `inline-flex` display property
+</Aside>

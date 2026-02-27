@@ -1,0 +1,249 @@
+---
+title: Card
+description: Flexible containers for grouping related content and actions.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**The Card component provides flexible, reusable containers for content like images, text, and links.**
+
+Cards are versatile UI elements that help organize information in a visually appealing, scannable format. They're perfect for displaying resources, news items, staff profiles, programs, and any content that benefits from a contained, structured presentation.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Multiple Card Styles" icon="list-format">
+    Image, Icon, Horizontal, Featured, Simple, and Button CTA variants to match any content need.
+  </Card>
+  <Card title="Responsive Grid Layouts" icon="laptop">
+    Automatically adapts from multiple columns to a single column on mobile using CSS Grid `auto-fit`.
+  </Card>
+  <Card title="Accessible Markup" icon="approve-check-circle">
+    Semantic `<article>` elements with proper ARIA labels, alt text requirements, and keyboard navigation.
+  </Card>
+  <Card title="No Dependencies" icon="information">
+    Pure HTML and inline CSS — no JavaScript required. Paste directly into the Edlio CMS WYSIWYG editor.
+  </Card>
+</CardGrid>
+
+## Card Types
+
+### Usage Guide
+
+| Card Type | Best Used For | Key Features |
+|---|---|---|
+| **Image Card** | General content, news, programs, resources | Standard layout with image on top |
+| **Icon Card** | Services, features, categories | Centered design with circular icon background |
+| **Horizontal Card** | Staff profiles, news items, detailed content | Side-by-side image and text layout |
+| **Featured Card** | Important announcements, highlighted programs | Navy gradient header with optional gold badge |
+| **Simple Card** | Quick links, text-heavy content, lists | No image, minimal styling with border |
+| **Button Card** | Call-to-action focused content | Includes a prominent button for a clear next step |
+
+## Copy-Paste Code
+
+Select any snippet below and paste it directly into the Edlio CMS WYSIWYG editor.
+
+<Tabs>
+  <TabItem label="Image Card">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: column; max-width: 320px;"><a href="#" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px;" aria-label="View details for Card Title"><img src="https://placehold.co/400x300/dce0ef/003366?text=Image" alt="Sample card image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" /></a><div style="padding: 15px 0;"><h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Card Title</h3><p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">This is a description for the card. Replace this text with your own content.</p></div></article></div></div>
+    ```html
+    <!-- IMAGE CARD (Default Style) -->
+    <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; max-width: 100%;">
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px;" aria-label="View details for Card Title">
+            <img src="/path/to/image.jpg" alt="Descriptive image alt text" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px; transition: transform 0.3s;">
+        </a>
+        <div style="padding: 15px 0;">
+            <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Card Title</h3>
+            <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">This is a description for the card. Replace this text with your own content.</p>
+        </div>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="Icon Card">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 280px;"><a href="#" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; width: 100%;" aria-label="View details for Icon Card"><div style="background-color: #e8f7fc; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#003366" stroke-width="2" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="#003366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="#003366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Icon Card Title</h3><p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">Use this card style for services, features, or categories that work better with icons.</p></a></article></div></div>
+    ```html
+    <!-- ICON CARD (With Icon Instead of Image) -->
+    <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.2s, box-shadow 0.2s; max-width: 100%;">
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; width: 100%;" aria-label="View details for Icon Card">
+            <div style="background-color: #e8f7fc; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#003366" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#003366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#003366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Icon Card Title</h3>
+            <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">Use this card style for services, features, or categories that work better with icons.</p>
+        </a>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="Horizontal Card">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: row; align-items: center; gap: 20px; flex-wrap: wrap;"><a href="#" style="text-decoration: none; color: inherit; flex: 0 0 160px; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px; min-width: 120px;" aria-label="View details for Horizontal Card"><img src="https://placehold.co/200x150/dce0ef/003366?text=Image" alt="Sample card image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" /></a><div style="flex: 1; min-width: 160px;"><h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Horizontal Card Title</h3><p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">This horizontal layout is great for news items, staff profiles, or content that needs more horizontal space.</p></div></article></div></div>
+    ```html
+    <!-- HORIZONTAL CARD (Image and Text Side by Side) -->
+    <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: row; align-items: center; gap: 20px; transition: transform 0.2s, box-shadow 0.2s; flex-wrap: wrap; max-width: 100%;">
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; flex: 0 0 200px; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px; min-width: 150px;" aria-label="View details for Horizontal Card">
+            <img src="/path/to/image.jpg" alt="Descriptive image alt text" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+        </a>
+        <div style="flex: 1; min-width: 200px;">
+            <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Horizontal Card Title</h3>
+            <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">This horizontal layout is great for news items, staff profiles, or content that needs more horizontal space.</p>
+        </div>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="Featured Card">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); overflow: hidden; display: flex; flex-direction: column; max-width: 320px;"><div style="background: linear-gradient(135deg, #003366 0%, #3a57a8 100%); padding: 20px; position: relative;"><div style="position: absolute; top: 10px; right: 10px; background-color: #f0ad4e; color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600;">Featured</div><h3 style="margin: 0; color: #fff; font-size: 20px; font-weight: 600; line-height: 1.3;">Featured Card Title</h3></div><a href="#" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 16/9; display: block; overflow: hidden;" aria-label="View details for Featured Card"><img src="https://placehold.co/400x225/dce0ef/003366?text=Image" alt="Sample card image" style="width: 100%; height: 100%; object-fit: cover;" /></a><div style="padding: 20px;"><p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">Use this style for important announcements, highlighted programs, or special district initiatives.</p></div></article></div></div>
+    ```html
+    <!-- FEATURED CARD (Navy Header with Gold Accent) -->
+    <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; max-width: 100%;">
+        <div style="background: linear-gradient(135deg, #003366 0%, #3a57a8 100%); padding: 20px; position: relative;">
+            <div style="position: absolute; top: 10px; right: 10px; background-color: #f0ad4e; color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600;">Featured</div>
+            <h3 style="margin: 0; color: #fff; font-size: 20px; font-weight: 600; line-height: 1.3;">Featured Card Title</h3>
+        </div>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 16/9; display: block; overflow: hidden;" aria-label="View details for Featured Card">
+            <img src="/path/to/image.jpg" alt="Descriptive image alt text" style="width: 100%; height: 100%; object-fit: cover;">
+        </a>
+        <div style="padding: 20px;">
+            <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">Use this style for important announcements, highlighted programs, or special district initiatives.</p>
+        </div>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="Simple Card">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><article style="background: #fff; border: 2px solid #dce0ef; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; max-width: 320px;"><a href="#" style="text-decoration: none; color: inherit; width: 100%;" aria-label="View details for Simple Card"><h3 style="margin: 0 0 12px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3; border-bottom: 2px solid #54c8eb; padding-bottom: 8px;">Simple Card Title</h3><p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">A minimal card design without images, perfect for quick links, resource lists, or text-heavy content.</p></a></article></div></div>
+    ```html
+    <!-- SIMPLE CARD (No Image, Text Only) -->
+    <article style="background: #fff; border: 2px solid #dce0ef; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; max-width: 100%;">
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; width: 100%;" aria-label="View details for Simple Card">
+            <h3 style="margin: 0 0 12px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3; border-bottom: 2px solid #54c8eb; padding-bottom: 8px;">Simple Card Title</h3>
+            <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">A minimal card design without images, perfect for quick links, resource lists, or text-heavy content.</p>
+        </a>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="Button Card">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 0; display: flex; flex-direction: column; overflow: hidden; max-width: 320px;"><div style="width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden;"><img src="https://placehold.co/400x300/dce0ef/003366?text=Image" alt="Sample card image" style="width: 100%; height: 100%; object-fit: cover;" /></div><div style="padding: 20px;"><h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Card with Button</h3><p style="margin: 0 0 16px 0; color: #333; line-height: 1.5; font-size: 14px;">This card includes a call-to-action button for clearer interaction prompts.</p><a href="#" style="display: inline-block; background-color: #3a57a8; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600;" aria-label="Learn more about Card with Button">Learn More</a></div></article></div></div>
+    ```html
+    <!-- CARD WITH BUTTON CTA -->
+    <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 0; display: flex; flex-direction: column; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; max-width: 100%;">
+        <div style="width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden;">
+            <img src="/path/to/image.jpg" alt="Descriptive image alt text" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 20px;">
+            <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Card with Button</h3>
+            <p style="margin: 0 0 16px 0; color: #333; line-height: 1.5; font-size: 14px;">This card includes a call-to-action button for clearer interaction prompts.</p>
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #3a57a8; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background-color 0.3s;" aria-label="Learn more about Card with Button">Learn More</a>
+        </div>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="Grid Layout">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff;"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; width: 100%;"><div style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 12px; display: flex; flex-direction: column; box-sizing: border-box; margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; flex-shrink: 0;"><img src="https://placehold.co/400x300/dce0ef/003366?text=Card+1" alt="Grid Card 1" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" /></div><div style="padding: 10px 0; margin: 0;"><h3 style="margin: 0 0 6px 0; padding: 0; color: #003366; font-size: 16px; font-weight: 600; line-height: 1.3; font-family: inherit; letter-spacing: normal; text-transform: none; border-bottom: none;">Grid Card 1</h3><p style="margin: 0; padding: 0; color: #333; line-height: 1.5; font-size: 13px; font-family: inherit; letter-spacing: normal;">First card in a responsive grid layout.</p></div></div><div style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 12px; display: flex; flex-direction: column; box-sizing: border-box; margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; flex-shrink: 0;"><img src="https://placehold.co/400x300/e8f7fc/003366?text=Card+2" alt="Grid Card 2" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" /></div><div style="padding: 10px 0; margin: 0;"><h3 style="margin: 0 0 6px 0; padding: 0; color: #003366; font-size: 16px; font-weight: 600; line-height: 1.3; font-family: inherit; letter-spacing: normal; text-transform: none; border-bottom: none;">Grid Card 2</h3><p style="margin: 0; padding: 0; color: #333; line-height: 1.5; font-size: 13px; font-family: inherit; letter-spacing: normal;">Second card in a responsive grid layout.</p></div></div><div style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 12px; display: flex; flex-direction: column; box-sizing: border-box; margin: 0;"><div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; flex-shrink: 0;"><img src="https://placehold.co/400x300/fef9f0/003366?text=Card+3" alt="Grid Card 3" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" /></div><div style="padding: 10px 0; margin: 0;"><h3 style="margin: 0 0 6px 0; padding: 0; color: #003366; font-size: 16px; font-weight: 600; line-height: 1.3; font-family: inherit; letter-spacing: normal; text-transform: none; border-bottom: none;">Grid Card 3</h3><p style="margin: 0; padding: 0; color: #333; line-height: 1.5; font-size: 13px; font-family: inherit; letter-spacing: normal;">Third card in a responsive grid layout.</p></div></div></div></div></div>
+    ```html
+    <!-- GRID LAYOUT EXAMPLE (3-Column Responsive Grid) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; width: 100%;">
+
+        <!-- Grid Card 1 -->
+        <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px;" aria-label="View details for Grid Card 1">
+                <img src="/path/to/image-1.jpg" alt="Grid Card 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            </a>
+            <div style="padding: 15px 0;">
+                <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Grid Card 1</h3>
+                <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">First card in a responsive grid layout.</p>
+            </div>
+        </article>
+
+        <!-- Grid Card 2 -->
+        <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px;" aria-label="View details for Grid Card 2">
+                <img src="/path/to/image-2.jpg" alt="Grid Card 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            </a>
+            <div style="padding: 15px 0;">
+                <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Grid Card 2</h3>
+                <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">Second card in a responsive grid layout.</p>
+            </div>
+        </article>
+
+        <!-- Grid Card 3 -->
+        <article style="background: #fff; border-radius: 8px; box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.25); padding: 15px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; width: 100%; aspect-ratio: 4/3; display: block; overflow: hidden; border-radius: 4px;" aria-label="View details for Grid Card 3">
+                <img src="/path/to/image-3.jpg" alt="Grid Card 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            </a>
+            <div style="padding: 15px 0;">
+                <h3 style="margin: 0 0 8px 0; color: #003366; font-size: 18px; font-weight: 600; line-height: 1.3;">Grid Card 3</h3>
+                <p style="margin: 0; color: #333; line-height: 1.5; font-size: 14px;">Third card in a responsive grid layout.</p>
+            </div>
+        </article>
+
+        <!-- Add more cards as needed -->
+    </div>
+    ```
+  </TabItem>
+</Tabs>
+
+## PUSD Brand Colors Used
+
+| Color Name | HEX | Used For |
+|---|---|---|
+| PUSD Navy | `#003366` | Card titles, icon strokes, featured header gradient start |
+| PUSD Light Blue | `#54c8eb` | Icon background, simple card underline accent |
+| PUSD Gold | `#f0ad4e` | Featured card badge |
+| PUSD Alt 3 (Deep Blue) | `#3a57a8` | Button CTA, featured header gradient end |
+| PUSD Alt 1 (Light Gray-Blue) | `#dce0ef` | Simple card border |
+| White | `#ffffff` | Card background |
+| Dark Gray | `#333` | Body text |
+
+## Customization Guide
+
+<Steps>
+1. **Replace image URLs** — Update the `src` attribute on `<img>` tags with your actual image path.
+
+2. **Update links** — Change the `href` attribute on `<a>` tags to your target page URL.
+
+3. **Update ARIA labels** — Edit the `aria-label` attribute text to match your actual card title for screen reader accuracy.
+
+4. **Modify titles** — Edit the text inside `<h3>` tags.
+
+5. **Edit descriptions** — Update the text inside `<p>` tags.
+
+6. **Adjust grid columns** — Change `minmax(280px, 1fr)` to control the minimum card width. A larger value means fewer columns; a smaller value allows more.
+
+7. **Change aspect ratios** — Modify `aspect-ratio: 4/3` to `16/9` for widescreen images or `1/1` for square images.
+
+8. **Add or remove elements** — Delete the `<img>` wrapper block to remove the image, or omit the button `<a>` tag on Button Cards to simplify.
+</Steps>
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- Semantic `<article>` elements provide proper document structure for screen readers
+- Descriptive `aria-label` attributes on links convey destination context beyond visible text
+- All `<img>` elements require meaningful `alt` text — describe what is shown, not just the filename
+- Proper heading hierarchy using `<h3>` inside each card
+- All color combinations meet **WCAG AA** contrast ratios
+- All links are keyboard accessible and focusable
+- SVG icons include `aria-hidden="true"` to prevent redundant screen reader announcements
+</Aside>
+
+## Best Practices
+
+<Aside type="tip" title="Do's">
+- Use **high-quality images** at appropriate dimensions (recommended: 400×300px or larger for 4:3 cards)
+- Keep card **titles concise** — 3 to 7 words
+- Limit **descriptions** to 1–2 sentences
+- Always add `target="_blank"` and `rel="noopener noreferrer"` for all external links
+- Provide **meaningful alt text** that describes the image content
+- Test cards on **mobile devices** to confirm proper scaling and stacking
+- Use the **same card style** for related content within a single grid
+- Limit grids to **3–4 cards per row** maximum to avoid overcrowding
+</Aside>
+
+<Aside type="caution" title="Don'ts">
+- Don't mix too many different card styles within a single grid section
+- Avoid using very long card titles or multi-paragraph descriptions
+- Don't omit `alt` text on images — use `alt=""` only for purely decorative images
+- Don't use the Featured Card style for routine content — reserve it for important announcements
+</Aside>

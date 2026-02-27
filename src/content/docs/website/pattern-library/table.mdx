@@ -1,0 +1,309 @@
+---
+title: Table
+description: Structured data display with responsive design and accessibility features.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+**The Table Component** provides accessible, branded data tables for the Edlio CMS. Simply copy and paste any table style below directly into the WYSIWYG editor, then customize the content to fit your needs.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Multiple Header Styles" icon="list-format">
+    Navy Alt, Dark Navy, PUSD Gold, and Light Blue header variants to match any content type or page context.
+  </Card>
+  <Card title="Accessible Markup" icon="approve-check-circle">
+    Semantic `<table>`, `<thead>`, `<tbody>`, `<th>`, and `<td>` elements. Headers provide automatic context to screen readers.
+  </Card>
+  <Card title="Striping Patterns" icon="bars">
+    Subtle light stripe (`#f8f9fa`) and strong contrast stripe (`#d3d3d3`) options keep rows scannable.
+  </Card>
+  <Card title="No Dependencies" icon="information">
+    Pure HTML with inline CSS — works immediately in Edlio CMS with no external stylesheets required.
+  </Card>
+</CardGrid>
+
+## Table Styles & When to Use
+
+| Style | Header Color | Best Used For |
+|---|---|---|
+| **Basic (Alt Navy)** | `#3a57a8` + light stripe | General data, schedules, comparisons |
+| **Striped (Gray)** | `#3a57a8` + gray stripe | Contact lists, directories, rosters |
+| **Gold Header** | `#f0ad4e` + warm stripe | Events, calendars, announcements |
+| **Light Blue Header** | `#54c8eb` + blue stripe | Resources, guides, reference lists |
+| **Compact (Minimal)** | `#003366` border-bottom only | Dates, quick reference, key-value pairs |
+| **Two-Column Rich** | `#3a57a8` + light stripe | Division contacts with multi-line cell content |
+
+## Copy-Paste Code
+
+Select any snippet below and paste it directly into the Edlio CMS WYSIWYG editor.
+
+<Tabs>
+  <TabItem label="Basic Navy">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef; border-radius: 4px; overflow: hidden;"><thead><tr style="background-color: #3a57a8;"><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Column 1</th><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Column 2</th><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Column 3</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 1</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 2</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 3</td></tr><tr style="background-color: #f8f9fa;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 4</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 5</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 6</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 7</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 8</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 9</td></tr></tbody></table></div></div>
+    ```html
+    <!-- BASIC TABLE (PUSD Navy Header) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef; border-radius: 4px; overflow: hidden;">
+        <thead>
+            <tr style="background-color: #3a57a8;">
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Column 1</th>
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Column 2</th>
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 1</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 2</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 3</td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 4</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 5</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 6</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 7</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 8</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Data 9</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Striped Contact">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef;"><thead><tr style="background-color: #3a57a8;"><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Name</th><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Department</th><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Phone</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">John Smith</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Communications</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2800</td></tr><tr style="background-color: #d3d3d3;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Jane Doe</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Technology</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2900</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Bob Johnson</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Business Services</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2783</td></tr><tr style="background-color: #d3d3d3;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Mary Williams</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Learning Support</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2730</td></tr></tbody></table></div></div>
+    ```html
+    <!-- STRIPED TABLE (PUSD Navy Header with Gray Stripes) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef;">
+        <thead>
+            <tr style="background-color: #3a57a8;">
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Name</th>
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Department</th>
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">John Smith</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Communications</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2800</td>
+            </tr>
+            <tr style="background-color: #d3d3d3;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Jane Doe</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Technology</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2900</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Bob Johnson</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Business Services</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2783</td>
+            </tr>
+            <tr style="background-color: #d3d3d3;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Mary Williams</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Learning Support</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">(858) 521-2730</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Gold Header">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #f0ad4e;"><thead><tr style="background-color: #f0ad4e;"><th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Event</th><th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Date</th><th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Location</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Board Meeting</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">December 15, 2025</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">District Office</td></tr><tr style="background-color: #fef9f0;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Staff Development</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">January 10, 2026</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Various Sites</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Parent Conference</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">February 5, 2026</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Schools</td></tr></tbody></table></div></div>
+    ```html
+    <!-- TABLE WITH GOLD HEADER (PUSD Gold) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #f0ad4e;">
+        <thead>
+            <tr style="background-color: #f0ad4e;">
+                <th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Event</th>
+                <th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Date</th>
+                <th style="color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #e09d3e;">Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Board Meeting</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">December 15, 2025</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">District Office</td>
+            </tr>
+            <tr style="background-color: #fef9f0;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Staff Development</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">January 10, 2026</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Various Sites</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Parent Conference</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">February 5, 2026</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Schools</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Light Blue Header">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #54c8eb;"><thead><tr style="background-color: #54c8eb;"><th style="color: #003366; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #44b8db;">Resource</th><th style="color: #003366; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #44b8db;">Description</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Budget Planning</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Financial reports and budget updates</td></tr><tr style="background-color: #e8f7fc;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Policy Documents</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">District policies and procedures</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Forms</td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Downloadable forms for families</td></tr></tbody></table></div></div>
+    ```html
+    <!-- TABLE WITH LIGHT BLUE HEADER (PUSD Light Blue) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #54c8eb;">
+        <thead>
+            <tr style="background-color: #54c8eb;">
+                <th style="color: #003366; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #44b8db;">Resource</th>
+                <th style="color: #003366; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #44b8db;">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Budget Planning</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Financial reports and budget updates</td>
+            </tr>
+            <tr style="background-color: #e8f7fc;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Policy Documents</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">District policies and procedures</td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Forms</td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">Downloadable forms for families</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Compact">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse;"><thead><tr style="background-color: #003366; border-bottom: 2px solid #003366;"><th style="color: white; padding: 10px; text-align: left; font-weight: 600; font-size: 14px;">Item</th><th style="color: white; padding: 10px; text-align: left; font-weight: 600; font-size: 14px;">Status</th></tr></thead><tbody><tr style="border-bottom: 1px solid #dce0ef;"><td style="padding: 10px; font-size: 14px; color: #333;">Enrollment Opens</td><td style="padding: 10px; font-size: 14px; color: #333;">February 2, 2026</td></tr><tr style="border-bottom: 1px solid #dce0ef;"><td style="padding: 10px; font-size: 14px; color: #333;">Summer Session</td><td style="padding: 10px; font-size: 14px; color: #333;">June 15, 2026</td></tr><tr><td style="padding: 10px; font-size: 14px; color: #333;">Fall Semester</td><td style="padding: 10px; font-size: 14px; color: #333;">August 25, 2026</td></tr></tbody></table></div></div>
+    ```html
+    <!-- COMPACT TABLE (Minimal Borders) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0;">
+        <thead>
+            <tr style="background-color: #003366; border-bottom: 2px solid #003366;">
+                <th style="color: white; padding: 10px; text-align: left; font-weight: 600; font-size: 14px;">Item</th>
+                <th style="color: white; padding: 10px; text-align: left; font-weight: 600; font-size: 14px;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #dce0ef;">
+                <td style="padding: 10px; font-size: 14px; color: #333;">Enrollment Opens</td>
+                <td style="padding: 10px; font-size: 14px; color: #333;">February 2, 2026</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #dce0ef;">
+                <td style="padding: 10px; font-size: 14px; color: #333;">Summer Session</td>
+                <td style="padding: 10px; font-size: 14px; color: #333;">June 15, 2026</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 14px; color: #333;">Fall Semester</td>
+                <td style="padding: 10px; font-size: 14px; color: #333;">August 25, 2026</td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+  <TabItem label="Two-Column Rich">
+    <div style="border: 2px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 16px;"><div style="background: #f5f5f5; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666; letter-spacing: 0.5px; border-bottom: 1px solid #e8e8e8;">Preview</div><div style="padding: 20px; background: #ffffff; overflow-x: auto;"><table style="width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #dce0ef;"><thead><tr style="background-color: #3a57a8;"><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Division</th><th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Contact Information</th></tr></thead><tbody><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Business Support Services</strong></td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Associate Superintendent:</strong> Eric Dill<br/><strong>Phone:</strong> (858) 521-2800 ext. 2783</td></tr><tr style="background-color: #f8f9fa;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Learning Support Services</strong></td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Associate Superintendent:</strong> Shelley Petersen<br/><strong>Phone:</strong> (858) 521-2800 ext. 2730</td></tr><tr style="background-color: #ffffff;"><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Personnel Support Services</strong></td><td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Interim:</strong> Julie Mitchell<br/><strong>Phone:</strong> (858) 521-2800 ext. 2761</td></tr></tbody></table></div></div>
+    ```html
+    <!-- TWO-COLUMN LAYOUT TABLE (Rich Cell Content) -->
+    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; border: 1px solid #dce0ef;">
+        <thead>
+            <tr style="background-color: #3a57a8;">
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Division</th>
+                <th style="color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 14px; border: 1px solid #2a4788;">Contact Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Business Support Services</strong></td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">
+                    <strong>Associate Superintendent:</strong> Eric Dill<br>
+                    <strong>Phone:</strong> (858) 521-2800 ext. 2783
+                </td>
+            </tr>
+            <tr style="background-color: #f8f9fa;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Learning Support Services</strong></td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">
+                    <strong>Associate Superintendent:</strong> Shelley Petersen<br>
+                    <strong>Phone:</strong> (858) 521-2800 ext. 2730
+                </td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;"><strong>Personnel Support Services</strong></td>
+                <td style="padding: 12px; border: 1px solid #dce0ef; font-size: 14px; color: #333;">
+                    <strong>Interim:</strong> Julie Mitchell<br>
+                    <strong>Phone:</strong> (858) 521-2800 ext. 2761
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    ```
+  </TabItem>
+</Tabs>
+
+## Layout Options
+
+| Option | How to Apply | Notes |
+|---|---|---|
+| **Full width** | `width: 100%` on `<table>` | Default for all variants |
+| **Fixed columns** | `table-layout: fixed` on `<table>` | Prevents overflow; columns share width equally |
+| **Custom column widths** | Add `width: XX%` to `<th>` or `<td>` | Column widths must total 100% |
+| **Rich cell content** | Use `<strong>`, `<br>`, `<a href="">` inside `<td>` | See Two-Column Rich variant |
+| **Center-aligned text** | `text-align: center` on `<th>` or `<td>` | Override `text-align: left` as needed |
+
+## PUSD Brand Colors Reference
+
+| Color Name | HEX | Used In |
+|---|---|---|
+| PUSD Navy | `#003366` | Compact header, border |
+| PUSD Alt 3 (Deep Blue) | `#3a57a8` | Basic, Striped, Two-Column headers |
+| PUSD Light Blue | `#54c8eb` | Light Blue header |
+| PUSD Gold | `#f0ad4e` | Gold header |
+| PUSD Alt 1 (Light Gray-Blue) | `#dce0ef` | Cell borders throughout |
+| Light Gray Stripe | `#f8f9fa` | Subtle alternating row |
+| Medium Gray Stripe | `#d3d3d3` | Strong contrast alternating row |
+| Warm Stripe | `#fef9f0` | Gold header alternating row |
+| Blue Stripe | `#e8f7fc` | Light Blue header alternating row |
+
+## Customization Guide
+
+<Steps>
+1. **Add rows** — Copy an existing `<tr>...</tr>` block from `<tbody>` and paste it below the last row. Maintain the correct alternating `background-color` to preserve striping.
+
+2. **Remove rows** — Delete the entire `<tr>...</tr>` block for any row you don't need.
+
+3. **Add columns** — Add a `<th>` in `<thead>` and a matching `<td>` in every `<tbody>` row. Keep `<th>` and `<td>` counts consistent across all rows.
+
+4. **Remove columns** — Delete the corresponding `<th>` and all matching `<td>` elements from every row.
+
+5. **Change header color** — Replace the `background-color` value in the `<tr style="...">` inside `<thead>`. Also update the `border` color on `<th>` elements to match.
+
+6. **Adjust column widths** — Add `width: XX%;` to individual `<th>` style attributes. Widths should total 100%.
+
+7. **Add rich content** — Use `<strong>`, `<br>`, and `<a href="">` tags directly inside `<td>` cells for multi-line or linked content.
+
+8. **Adjust text alignment** — Change `text-align: left` to `center` or `right` on any `<th>` or `<td>` as needed.
+</Steps>
+
+## Accessibility
+
+<Aside type="note" title="Accessibility Features">
+- Semantic `<table>`, `<thead>`, `<tbody>`, `<th>`, and `<td>` structure for correct screen reader interpretation
+- `<th>` header elements automatically provide column context — no `aria-label` needed for standard data tables
+- All color combinations meet **WCAG AA** contrast standards
+- Minimum `font-size: 14px` ensures text legibility at all sizes
+- `width: 100%` and `table-layout: fixed` ensure the table scales within its container without horizontal overflow
+</Aside>
+
+## Best Practices
+
+<Aside type="tip" title="Do's">
+- Use tables for **tabular data only** — not for page layout
+- Limit tables to **3–5 columns** for readability, especially on mobile
+- Use **descriptive column headers** that clearly identify the data below
+- **Sort rows logically** — alphabetically or by date — for easy scanning
+- Use the same table style **consistently** throughout a page
+- Use **rich content** (`<strong>`, `<br>`, `<a>`) inside cells to add detail without adding columns
+</Aside>
+
+<Aside type="caution" title="Don'ts">
+- Don't use tables to control page layout or positioning
+- Don't mix multiple header color styles on a single page
+- Don't omit `<thead>` — it is required for screen reader column context
+- Don't use very small font sizes below `14px` inside cells
+</Aside>
